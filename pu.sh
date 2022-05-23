@@ -1,4 +1,5 @@
 #!/bin/bash
+echo
 git add .
 echo "<><><><><><><><><><><><>"
 echo
@@ -7,6 +8,7 @@ read cmtMsg
 git commit -m "$cmtMsg"
 echo "<><><><><><><><><><><>"
 echo
+git branch
 echo “Push to which branch?”
 read pushBranch
 git push origin $pushBranch
@@ -15,3 +17,4 @@ echo
 echo "Push complete :) "
 echo
 echo "<><><><><><><><><><><>"
+echo
