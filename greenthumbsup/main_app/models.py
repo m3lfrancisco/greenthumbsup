@@ -3,11 +3,17 @@ from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
 
-TIMES = (
+TIME_OF_DAY_CHOICES = (
     ('M', 'Morning'),
     ('A', 'Afternoon'),
     ('E', 'Evening')
 )
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=100)
 
 class Fertilizer(models.Model):
     name = models.CharField(max_length=100)
@@ -25,7 +31,7 @@ class Plant(models.Model):
     type = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
     sunlight = models.CharField(max_length=100)
-    adoptiondate = models.DateField('Adoption Date')
+    adoption_date = models.DateField('Adoption Date')
     notes = models.TextField(max_length=250)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
@@ -50,8 +56,8 @@ class Watering(models.Model):
     time = models.CharField(
         'Time of Day',
         max_length=1,
-        choices=TIMES,
-        default=TIMES[0][0]
+        choices=TIME_OF_DAY_CHOICES,
+        default=TIME_OF_DAY_CHOICES[0][0]
     )
     frequency = models.CharField(max_length=100)
 
