@@ -11,6 +11,7 @@ echo
 git branch
 echo “Push to which branch?”
 read pushBranch
+echo
 git push origin $pushBranch
 echo "<><><><><><><><><><><>"
 echo
