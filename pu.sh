@@ -18,3 +18,5 @@ echo
 echo "Push complete :) "
 echo
 echo "<><><><><><><><><><><>"
+echo
+gh pr create -w
