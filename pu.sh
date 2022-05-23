@@ -3,8 +3,10 @@ git add .
 echo "<><><><><><><><><><><><>"
 echo
 echo "Enter commit message: "
+echo
 read cmtMsg
 git commit -m "$cmtMsg"
+echo
 echo "<><><><><><><><><><><>"
 echo
 git branch
@@ -21,3 +23,4 @@ echo
 echo "<><><><><><><><><><><>"
 echo
 gh pr create -w
+echo "Opening a browser tab for GH Pull Request..."
