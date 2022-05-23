@@ -8,6 +8,7 @@ git commit -m "$cmtMsg"
 echo "<><><><><><><><><><><>"
 echo
 echo “Push to which branch?”
+echo
 read pushBranch
 git push origin $pushBranch
 echo "<><><><><><><><><><><>"
