@@ -30,7 +30,7 @@ def about(request):
 def plants_index(request):
     """
     plants index page
-    http://localhost:8000/dogs/
+    http://localhost:8000/plants/
     """
     logging.info('calling plants_index')
     plants = Plant.objects.all()
