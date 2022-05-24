@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-content">
                 <span class="card-title">{{ plant.name }}</span>
-                <p>Type: {{ plant.type }}</p>
+                <p>Plant Type: {{ plant.plant_type }}</p>
                 <p>Color: {{ plant.color }}</p>
                 <p>Sunlight: {{ plant.sunlight }}</p>
                 <p>Adoption Date: {{ plant.adoption_date }}</p>
@@ -73,34 +73,39 @@
                     {% endfor %}
                 </tbody>
             </table>
-        </div>
     </div>
-    <hr>
-    <div class="row">
+</div>
+<hr>
+<div class="row">
     <div class="col s6">
         {% if user == plant.user %}
-        <h3 class="purple-text">{{ plant.name }}'s Fertilizers</h3>
-        {% if plant.fertilizers.count %}
-            {% for fertilizer in plant.fertilizers.all %}
-            <div class="card">
-                <div class="card-content">
-                <span class="card-title">
-                    <span>{{ fertilizer.name }}</span> 
-                </span>
-                </div>
-                <div class="card-action">
-                <form action="{% url 'unassoc_fertilizer' plant.id fertilizer.id %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit" class="btn waves-effect waves-light">Remove</button>
-                </form>
-                </div>
-            </div>
-            {% endfor %}
+            <h3 class="purple-text">{{ plant.name }}'s Fertilizers</h3>
+            {% if plant.fertilizers.count %}
+                {% for fertilizer in plant.fertilizers.all %}
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <span>{{ fertilizer.name }}</span> 
+                            </span>
+                            <form method="post" action="{% url 'add_fertilizing' plant.id %}">
+                                {% csrf_token %}
+                                {{ fertilizer_form.as_p }}
+                                <input type="submit" class="btn" value="Add Fertilizing">
+                            </form>
+                        </div>
+                        <div class="card-action">
+                            <form action="{% url 'unassoc_fertilizer' plant.id fertilizer.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn waves-effect waves-light">Remove</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h5 class="cyan-text">No Fertilizers :(</h5>
+            {% endif %}
         {% else %}
-            <h5 class="cyan-text">No Fertilizers :(</h5>
-        {% endif %}
-        {% else %}
-        
+    
         {% endif %}
     </div>
     <!-- Available fertilizers will come after this line -->
