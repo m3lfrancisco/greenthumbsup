@@ -28,7 +28,7 @@ class Fertilizer(models.Model):
 
 class Plant(models.Model):
     name = models.CharField(max_length=100)
-    type = models.CharField(max_length=100)
+    plant_type = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
     sunlight = models.CharField(max_length=100)
     adoption_date = models.DateField('Adoption Date')
