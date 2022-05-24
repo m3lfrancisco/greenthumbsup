@@ -1,4 +1,5 @@
 #!/bin/bash
+echo
 git add .
 echo "<><><><><><><><><><><><>"
 echo
