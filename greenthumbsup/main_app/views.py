@@ -39,11 +39,11 @@ def plants_index(request):
 def my_plants(request):
     """
     user's plants index page
-    http://localhost:8000/my_plants/
+    http://localhost:8000/plants/my_plants/
     """
     logging.info('calling my_plants (user plants)')
     plants = Plant.objects.filter(user=request.user)
-    return render(request, 'plants/index.html', {'plants': plants})
+    return render(request, 'plants/my_plants.html', {'plants': plants})
 
 def plants_detail(request, plant_id):
     """
