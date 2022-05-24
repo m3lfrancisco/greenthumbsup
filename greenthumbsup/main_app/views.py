@@ -65,7 +65,7 @@ class PlantCreate(CreateView):
     http://localhost:8000/plants/create/
     """
     model = Plant
-    fields = ['name', 'type', 'color', 'sunlight', 'adoption_date', 'notes']
+    fields = ['name', 'plant_type', 'color', 'sunlight', 'adoption_date', 'notes']
     success_url = '/plants/'
 
     def form_valid(self, form):
@@ -78,7 +78,7 @@ class PlantUpdate(UpdateView):
     http://localhost:8000/plants/1/update/
     """
     model = Plant
-    fields = ['name', 'type', 'color', 'sunlight', 'adoption_date', 'notes']
+    fields = ['name', 'plant_type', 'color', 'sunlight', 'adoption_date', 'notes']
     
     def get_success_url(self, **kwargs):
         return reverse('detail', args=(self.object.id,))
