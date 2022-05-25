@@ -50,7 +50,7 @@ def plants_detail(request, plant_id):
     plant detail page
     http://localhost:8000/dogs/1/
     """
-    logging.info('calling plant_detail')
+    logging.info('calling plants_detail')
     plant = Plant.objects.get(id=plant_id)
     fertilizers_plant_doesnt_have = Fertilizer.objects.exclude(id__in = plant.fertilizers.all().values_list('id'))
     return render(request, 'plants/detail.html', {
