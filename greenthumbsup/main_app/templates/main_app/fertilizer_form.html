@@ -7,14 +7,22 @@
     <h1>Add a Fertilizer</h1>
 {% endif %}
 
-<form action="" method="post">
+<form action="" method="POST">
     {% csrf_token %}
-        <table>
-            {{ form.as_table }}
-        </table>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <table>
+        {{ form.as_table }}
+    </table>
+    {% comment %} <div class="row">
+        <div class="input-field col s6">
+            <input placeholder="Fertilizer Name" id="fertilizer_name" type="text" class="validate">
+            <input hidden placeholder="Fertilize Date" id="fert_date" type="text" class="validate">
+            <input hidden placeholder="Fertilizer Frequency" id="fertilizer_frequency" type="text" class="validate">
+        </div> {% endcomment %}
+        <input type="submit" value="Submit!" class="btn">
+        {% comment %} <button class="btn waves-effect waves-light" type="submit">Submit
             <i class="material-icons right">send</i>
-        </button>
+        </button> {% endcomment %}
+    {% comment %} </div> {% endcomment %}
 </form>
 
 {% endblock %}
