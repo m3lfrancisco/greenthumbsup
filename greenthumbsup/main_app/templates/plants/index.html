@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h1>All Community Plants</h1>
+<h1>All Community Plants</h1>
 
 {% for plant in plants %}
-  <a href="{% url 'detail' plant.id %}">
-    <div class="card">
-        <div class="card-content">
-            <span class="card-title">{{ plant.name }}</span>
+    <a href="{% url 'detail' plant.id %}">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">{{ plant.name }}</span>
                 {% for photo in plant.photo_set.all %}
                     <img class="responsive-img card-panel" src="{{photo.url}}">
                 {% empty %}
@@ -23,9 +23,9 @@
                 {% else %}
                     <p>Green Thumbs Up!</p>
                 {% endif %}
+            </div>
         </div>
-    </div>
-  </a>
+    </a>
 {% endfor %}
 
 {% endblock %}
