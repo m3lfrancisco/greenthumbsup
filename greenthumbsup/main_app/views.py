@@ -90,7 +90,7 @@ class PlantDelete(DeleteView):
     http://localhost:8000/plants/1/delete/
     """
     model = Plant
-    success_url = '/plants/'
+    success_url = '/plants/my_plants/'
 
 def add_watering(request, plant_id):
     form = WateringForm(request.POST)
