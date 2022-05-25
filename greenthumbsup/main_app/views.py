@@ -176,7 +176,7 @@ class FertilizerUpdate(UpdateView):
     http://localhost:8000/fertilizers/1/update/
     """
     model = Fertilizer
-    fields = ['name', 'date', 'frequency']
+    fields = '__all__'
 
 class FertilizerDelete(DeleteView):
     """
