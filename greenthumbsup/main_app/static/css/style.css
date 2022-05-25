@@ -12,3 +12,13 @@ footer.page-footer {
     padding-top: 0;
     text-align: right;
 }
+
+header, main, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
