@@ -9,4 +9,4 @@ class WateringForm(ModelForm):
 class FertilizingForm(ModelForm):
     class Meta:
         model = Fertilizer
-        fields = ['date', 'frequency']
+        fields = ['fert_date', 'frequency']
