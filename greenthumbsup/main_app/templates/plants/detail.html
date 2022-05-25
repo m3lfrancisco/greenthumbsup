@@ -54,11 +54,6 @@
         
         {% endif %}
             <br>
-            {% if plant.watered_for_today %}
-                <div class="card-panel teal-text center-align">{{plant.name}} has been watered for today</div>
-            {% else %}
-                <div class="card-panel red-text center-align">{{plant.name}} might be thirsty</div>
-            {% endif %}
             <table class="striped">
                 <thead>
                     <tr><th>Date</th><th>Time</th><th>Frequency</th></tr>
@@ -90,7 +85,7 @@
                             <form method="post" action="{% url 'add_fertilizing' plant.id %}">
                                 {% csrf_token %}
                                 {{ fertilizing_form.as_p }}
-                                <input type="submit" class="btn" value="Add Fertilizing">
+                                <input type="submit" class="btn" value="Fertilize">
                             </form>
                         </div>
                         <div class="card-action">
@@ -101,13 +96,26 @@
                         </div>
                     </div>
                 {% endfor %}
+                <table class="striped">
+                    <thead>
+                        <tr><th>Date</th><th>Frequency</th></tr>
+                    </thead>
+                    <tbody>
+                        {% for fertilizer in plant.fertilizer_set.all %}
+                            <tr>
+                                <td>{{fertilizer.date}}</td>
+                                <td>{{fertilizer.frequency}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             {% else %}
                 <h5 class="cyan-text">No Fertilizers :(</h5>
             {% endif %}
         {% else %}
     
         {% endif %}
-        
+
     </div>
     <!-- Available fertilizers will come after this line -->
     <div class="col s6">

@@ -41,9 +41,6 @@ class Plant(models.Model):
     
     def get_absolute_url(self):
         return reverse('detail', kwargs={'plant_id': self.id})
-    
-    def watered_for_today(self):
-        return self.watering_set.filter(date=date.today()).count()
 
 class Photo(models.Model):
     url = models.CharField(max_length=200)
