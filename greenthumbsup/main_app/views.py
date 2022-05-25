@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from .models import Plant, Fertilizer, Photo
-from .forms import WateringForm
+from .forms import WateringForm, FertilizingForm
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -56,7 +56,7 @@ def plants_detail(request, plant_id):
     return render(request, 'plants/detail.html', {
         'plant': plant, 
         'watering_form': WateringForm,
-        # 'fertilizing_form': FertilizingForm,
+        'fertilizing_form': FertilizingForm,
         'fertilizers': fertilizers_plant_doesnt_have
         })
 
@@ -90,7 +90,7 @@ class PlantDelete(DeleteView):
     http://localhost:8000/plants/1/delete/
     """
     model = Plant
-    success_url = '/plants/'
+    success_url = '/plants/my_plants/'
 
 def add_watering(request, plant_id):
     form = WateringForm(request.POST)
@@ -98,6 +98,14 @@ def add_watering(request, plant_id):
         new_watering = form.save(commit=False)
         new_watering.plant_id = plant_id
         new_watering.save()
+    return redirect('detail', plant_id=plant_id)
+
+def add_fertilizing(request, plant_id):
+    form = FertilizingForm(request.POST)
+    if form.is_valid():
+        new_fertilizing = form.save(commit=False)
+        new_fertilizing.plant_id = plant_id
+        new_fertilizing.save()
     return redirect('detail', plant_id=plant_id)
 
 def add_photo(request, plant_id):
@@ -168,7 +176,7 @@ class FertilizerUpdate(UpdateView):
     http://localhost:8000/fertilizers/1/update/
     """
     model = Fertilizer
-    fields = ['name', 'date', 'frequency']
+    fields = '__all__'
 
 class FertilizerDelete(DeleteView):
     """

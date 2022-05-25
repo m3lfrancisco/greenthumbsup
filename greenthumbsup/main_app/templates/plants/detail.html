@@ -54,11 +54,6 @@
         
         {% endif %}
             <br>
-            {% if plant.watered_for_today %}
-                <div class="card-panel teal-text center-align">{{plant.name}} has been watered for today</div>
-            {% else %}
-                <div class="card-panel red-text center-align">{{plant.name}} might be thirsty</div>
-            {% endif %}
             <table class="striped">
                 <thead>
                     <tr><th>Date</th><th>Time</th><th>Frequency</th></tr>
@@ -87,11 +82,11 @@
                             <span class="card-title">
                                 <span>{{ fertilizer.name }}</span> 
                             </span>
-                            {% comment %} <form method="post" action="{% url 'add_fertilizing' plant.id %}">
+                            <form method="post" action="{% url 'add_fertilizing' plant.id %}">
                                 {% csrf_token %}
-                                {{ fertilizer_form.as_p }}
-                                <input type="submit" class="btn" value="Add Fertilizing">
-                            </form> {% endcomment %}
+                                {{ fertilizing_form.as_p }}
+                                <input type="submit" class="btn" value="Fertilize">
+                            </form>
                         </div>
                         <div class="card-action">
                             <form action="{% url 'unassoc_fertilizer' plant.id fertilizer.id %}" method="post">
@@ -101,12 +96,26 @@
                         </div>
                     </div>
                 {% endfor %}
+                <table class="striped">
+                    <thead>
+                        <tr><th>Date</th><th>Frequency</th></tr>
+                    </thead>
+                    <tbody>
+                        {% for fertilizer in plant.fertilizer_set.all %}
+                            <tr>
+                                <td>{{fertilizer.fert_date}}</td>
+                                <td>{{fertilizer.frequency}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             {% else %}
                 <h5 class="cyan-text">No Fertilizers :(</h5>
             {% endif %}
         {% else %}
     
         {% endif %}
+
     </div>
     <!-- Available fertilizers will come after this line -->
     <div class="col s6">
@@ -141,6 +150,14 @@
 
     const dateEl = document.getElementById('id_date');
     M.Datepicker.init(dateEl, {
+        format: 'yyyy-mm-dd',
+        defaultDate: new Date(),
+        setDefaultDate: true,
+        autoClose: true
+    });
+
+    const fertDateEl = document.getElementById('id_fert_date');
+    M.Datepicker.init(fertDateEl, {
         format: 'yyyy-mm-dd',
         defaultDate: new Date(),
         setDefaultDate: true,
