@@ -87,11 +87,11 @@
                             <span class="card-title">
                                 <span>{{ fertilizer.name }}</span> 
                             </span>
-                            <form method="post" action="{% url 'add_fertilizing' plant.id %}">
+                            {% comment %} <form method="post" action="{% url 'add_fertilizing' plant.id %}">
                                 {% csrf_token %}
                                 {{ fertilizer_form.as_p }}
                                 <input type="submit" class="btn" value="Add Fertilizing">
-                            </form>
+                            </form> {% endcomment %}
                         </div>
                         <div class="card-action">
                             <form action="{% url 'unassoc_fertilizer' plant.id fertilizer.id %}" method="post">
