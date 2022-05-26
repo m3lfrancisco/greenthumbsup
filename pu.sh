@@ -23,6 +23,6 @@ echo "Push complete :) "
 echo
 echo "<><><><><><><><><><><>"
 echo
-gh pr create -w
 echo "Opening a browser tab for GH Pull Request..."
+gh pr create -w
 echo
