@@ -122,8 +122,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT='staticfiles'
-
 LOGIN_REDIRECT_URL = '/plants/my_plants/'
 LOGOUT_REDIRECT_URL = '/'
 
