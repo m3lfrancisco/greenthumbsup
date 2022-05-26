@@ -168,7 +168,7 @@ class FertilizerCreate(CreateView):
     http://localhost:8000/fertilizers/create/
     """
     model = Fertilizer
-    fields = ['name', 'fert_date', 'frequency']
+    fields = '__all__'
     success_url = '/fertilizers/'
 
 class FertilizerUpdate(UpdateView):
