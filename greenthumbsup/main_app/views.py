@@ -103,9 +103,9 @@ def add_watering(request, plant_id):
 def add_fertilizing(request, plant_id):
     form = FertilizingForm(request.POST)
     if form.is_valid():
-        new_fertilizing = form.save(commit=False)
-        new_fertilizing.plant_id = plant_id
-        new_fertilizing.save()
+        new_fertilizer = form.save(commit=False)
+        new_fertilizer.plant_id = plant_id
+        new_fertilizer.save()
     return redirect('detail', plant_id=plant_id)
 
 def add_photo(request, plant_id):
