@@ -17,8 +17,6 @@ class Profile(models.Model):
 
 class Fertilizer(models.Model):
     name = models.CharField(max_length=100)
-    fertilize_date = models.DateField(null=True, blank=True)
-    frequency = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.name
@@ -26,6 +24,11 @@ class Fertilizer(models.Model):
     def get_absolute_url(self):
         return reverse('fertilizers_detail', kwargs={'pk':self.id})
     
+
+class FertService(models.Model):
+    fertilize_date = models.DateField(null=True, blank=True)
+    frequency = models.CharField(max_length=100, blank=True)
+
     # def __str__(self):
     #     return f"{self.get_frequency_display()} on {self.fertilize_date}"
 
