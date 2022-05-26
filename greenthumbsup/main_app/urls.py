@@ -11,7 +11,7 @@ urlpatterns = [
     path('plants/<int:pk>/update/', views.PlantUpdate.as_view(), name='plants_update'),
     path('plants/<int:pk>/delete/', views.PlantDelete.as_view(), name='plants_delete'),
     path('plants/<int:plant_id>/add_watering/', views.add_watering, name='add_watering'),
-    path('plants/<int:plant_id>/add_fertilizing/', views.add_fertilizing, name='add_fertilizing'),
+    # path('plants/<int:plant_id>/add_fertilizing/', views.add_fertilizing, name='add_fertilizing'),
     path('plants/<int:plant_id>/add_photo/', views.add_photo, name='add_photo'),
     path('plants/<int:plant_id>/assoc_fertilizer/<int:fertilizer_id>/', views.assoc_fertilizer, name='assoc_fertilizer'),
     path('plants/<int:plant_id>/unassoc_fertilizer/<int:fertilizer_id>/', views.unassoc_fertilizer, name='unassoc_fertilizer'),
@@ -21,5 +21,7 @@ urlpatterns = [
     path('fertilizers/<int:pk>/update/', views.FertilizerUpdate.as_view(), name='fertilizers_update'),
     path('fertilizers/<int:pk>/delete/', views.FertilizerDelete.as_view(), name='fertilizers_delete'),
     path('accounts/signup/', views.signup, name='signup'),
-    # path('profile/create/', views.ProfileCreate.as_view(), name='profiles_create'),
+    path('profile/create/', views.ProfileCreate.as_view(), name='profiles_create'),
+    path('profile/<int:user_id>/', views.UserProfile.as_view(), name='user_profile'),
+    path('profile/<int:pk>/update/', views.ProfileUpdate.as_view(), name='profiles_update'),
 ]

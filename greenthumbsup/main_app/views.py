@@ -7,8 +7,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
-from .models import Plant, Fertilizer, Photo
-from .forms import WateringForm, FertilizingForm
+from .models import Plant, Fertilizer, Photo, Profile
+from .forms import WateringForm 
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -36,6 +36,7 @@ def plants_index(request):
     plants = Plant.objects.all()
     return render(request, 'plants/index.html', {'plants': plants})
 
+@login_required
 def my_plants(request):
     """
     user's plants index page
@@ -45,6 +46,7 @@ def my_plants(request):
     plants = Plant.objects.filter(user=request.user)
     return render(request, 'plants/my_plants.html', {'plants': plants})
 
+@login_required
 def plants_detail(request, plant_id):
     """
     plant detail page
@@ -56,11 +58,11 @@ def plants_detail(request, plant_id):
     return render(request, 'plants/detail.html', {
         'plant': plant, 
         'watering_form': WateringForm,
-        'fertilizing_form': FertilizingForm,
+        # 'fertilizing_form': FertAndServiceForm,
         'fertilizers': fertilizers_plant_doesnt_have
         })
 
-class PlantCreate(CreateView):
+class PlantCreate(LoginRequiredMixin, CreateView):
     """
     This class will create a plant object
     http://localhost:8000/plants/create/
@@ -73,7 +75,7 @@ class PlantCreate(CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-class PlantUpdate(UpdateView):
+class PlantUpdate(LoginRequiredMixin, UpdateView):
     """
     This class will update a plant object from the DB
     http://localhost:8000/plants/1/update/
@@ -84,7 +86,7 @@ class PlantUpdate(UpdateView):
     def get_success_url(self, **kwargs):
         return reverse('detail', args=(self.object.id,))
 
-class PlantDelete(DeleteView):
+class PlantDelete(LoginRequiredMixin, DeleteView):
     """
     This class will delete a plant object from the DB
     http://localhost:8000/plants/1/delete/
@@ -92,6 +94,7 @@ class PlantDelete(DeleteView):
     model = Plant
     success_url = '/plants/my_plants/'
 
+@login_required
 def add_watering(request, plant_id):
     form = WateringForm(request.POST)
     if form.is_valid():
@@ -100,14 +103,24 @@ def add_watering(request, plant_id):
         new_watering.save()
     return redirect('detail', plant_id=plant_id)
 
-def add_fertilizing(request, plant_id):
-    form = FertilizingForm(request.POST)
-    if form.is_valid():
-        new_fertilizer = form.save(commit=False)
-        new_fertilizer.plant_id = plant_id
-        new_fertilizer.save()
-    return redirect('detail', plant_id=plant_id)
+# def add_fertilizing(request, plant_id):
+#     form = FertilizingForm(request.POST)
+#     if form.is_valid():
+#         new_fertilizer = form.save(commit=False)
+#         new_fertilizer.plant_id = plant_id
+#         new_fertilizer.save()
+#     return redirect('detail', plant_id=plant_id)
 
+# def add_fertilizing(request, plant_id):
+#     form = FertAndServiceForm(request.POST)
+#     if form.is_valid():
+#         new_fertilizer = form.save(commit=False)
+#         new_fertilizer.plant_id = plant_id
+#         new_fertilizer.save()
+#         logging.info('calling add_fertilizing form.is_valid')
+#     return redirect('detail', plant_id=plant_id)
+
+@login_required
 def add_photo(request, plant_id):
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:
@@ -122,10 +135,12 @@ def add_photo(request, plant_id):
             print('An error occurred while uploading file to S3')
     return redirect('detail', plant_id=plant_id)
 
+@login_required
 def assoc_fertilizer(request, plant_id, fertilizer_id):
     Plant.objects.get(id=plant_id).fertilizers.add(fertilizer_id)
     return redirect('detail', plant_id=plant_id)
 
+@login_required
 def unassoc_fertilizer(request, plant_id, fertilizer_id):
     Plant.objects.get(id=plant_id).fertilizers.remove(fertilizer_id)
     return redirect('detail', plant_id=plant_id)
@@ -148,21 +163,45 @@ def signup(request):
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
 
-class FertilizerList(ListView):
+class ProfileCreate(LoginRequiredMixin, CreateView):
+    """
+    This class will create a profile object
+    http://localhost:8000/profile/create/
+    """
+    model = Profile
+    fields = '__all__'
+    success_url = '/profile/'
+
+class ProfileUpdate(LoginRequiredMixin, UpdateView):
+    """
+    This class will update a profile object
+    http://localhost:8000/profile/1/update/
+    """
+    model = Profile
+    fields = '__all__'
+
+class UserProfile(LoginRequiredMixin, ListView):
+    """
+    user profile page
+    http://localhost:8000/profile/1
+    """
+    model = Profile
+
+class FertilizerList(LoginRequiredMixin, ListView):
     """
     fertilizer index page
     http://localhost:8000/fertilizers/
     """
     model = Fertilizer
 
-class FertilizerDetail(DetailView):
+class FertilizerDetail(LoginRequiredMixin, DetailView):
     """
     fertilizer detail page
     http://localhost:8000/fertilizers/1
     """
     model = Fertilizer
 
-class FertilizerCreate(CreateView):
+class FertilizerCreate(LoginRequiredMixin, CreateView):
     """
     This class will create a fertilizer object
     http://localhost:8000/fertilizers/create/
@@ -171,7 +210,7 @@ class FertilizerCreate(CreateView):
     fields = '__all__'
     success_url = '/fertilizers/'
 
-class FertilizerUpdate(UpdateView):
+class FertilizerUpdate(LoginRequiredMixin, UpdateView):
     """
     This class will update a fertilizer object
     http://localhost:8000/fertilizers/1/update/
@@ -179,7 +218,7 @@ class FertilizerUpdate(UpdateView):
     model = Fertilizer
     fields = '__all__'
 
-class FertilizerDelete(DeleteView):
+class FertilizerDelete(LoginRequiredMixin, DeleteView):
     """
     This class will delete a fertilizer object
     http://localhost:8000/fertilizers/1/delete/
