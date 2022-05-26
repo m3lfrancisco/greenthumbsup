@@ -24,5 +24,6 @@ echo
 echo "<><><><><><><><><><><>"
 echo
 echo "Opening a browser tab for GH Pull Request..."
+echo
 gh pr create -w
 echo
