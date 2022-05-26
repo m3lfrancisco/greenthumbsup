@@ -101,10 +101,10 @@
                         <tr><th>Date</th><th>Frequency</th></tr>
                     </thead>
                     <tbody>
-                        {% for fertilizer in plant.fertilizer_set.all %}
+                        {% for fertservice in plant.fertservice_set.all %}
                             <tr>
-                                <td>{{fertilizer.fertilize_date}}</td>
-                                <td>{{fertilizer.frequency}}</td>
+                                <td>{{fertservice.fertilize_date}}</td>
+                                <td>{{fertservice.frequency}}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
