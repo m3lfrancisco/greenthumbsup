@@ -25,6 +25,12 @@ class Fertilizer(models.Model):
     
     def get_absolute_url(self):
         return reverse('fertilizers_detail', kwargs={'pk':self.id})
+    
+    # def __str__(self):
+    #     return f"{self.get_frequency_display()} on {self.fertilize_date}"
+
+    class Meta:
+        ordering = ['-fertilize_date']
 
 class Plant(models.Model):
     name = models.CharField(max_length=100)
