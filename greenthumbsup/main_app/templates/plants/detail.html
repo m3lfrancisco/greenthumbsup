@@ -103,7 +103,7 @@
                     <tbody>
                         {% for fertilizer in plant.fertilizer_set.all %}
                             <tr>
-                                <td>{{fertilizer.fert_date}}</td>
+                                <td>{{fertilizer.fertilize_date}}</td>
                                 <td>{{fertilizer.frequency}}</td>
                             </tr>
                         {% endfor %}
@@ -156,7 +156,7 @@
         autoClose: true
     });
 
-    const fertDateEl = document.getElementById('id_fert_date');
+    const fertDateEl = document.getElementById('id_fertilize_date');
     M.Datepicker.init(fertDateEl, {
         format: 'yyyy-mm-dd',
         defaultDate: new Date(),

@@ -17,7 +17,7 @@ class Profile(models.Model):
 
 class Fertilizer(models.Model):
     name = models.CharField(max_length=100)
-    fert_date = models.DateField('Fertilize Date')
+    fertilize_date = models.DateField(null=True, blank=True)
     frequency = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
