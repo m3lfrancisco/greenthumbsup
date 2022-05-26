@@ -1,6 +1,6 @@
-from django import forms
+# from django import forms
 from django.forms import ModelForm
-from .models import Watering, Fertilizer, FertService
+from .models import Watering
 
 class WateringForm(ModelForm):
     class Meta:
