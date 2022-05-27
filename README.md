@@ -15,13 +15,29 @@ R `@roob19`
 
 # <center>**GreenThumbpsUp**</center>
 
-<center>**Welcome to Mymovieapp**</center>
+<center>**Welcome to Greenthumbsup**</center>
 
-### <center>Launch: [**Here**](https://quiet-springs-85754.herokuapp.com/movies/)</center>
+### <center>Launch: [**Here**](https://greenthumbsup.herokuapp.com//)</center>
 
 <center>### **How-It Works a user story:**</center>
-The user will launch the app over at Heroku or link and be taken to the landing pat, where they will login and be authenticated by Google OAuth2.  
-The user data will be added in user collection as a document in Mongodb the unique identifier for the app. Once logged in the user can browse all their Movies and movie details by clicking by on movie details button.  If the user clicks the movie detail button the user is presented with title, release year, rating, cast, review textbox and a movie rating with 1 being aweful and 5 an acadamey award, whether or not the movie is showing in theatres. The user is confronted also with a dropdown menu and add cast button to add cast not already in the users movie collection. The user clicks the add cast button where the it will show up onscreen and in the database under the performers collection.  still on the movie detail page also contains a reviews textbox to add reviews the user selects the 1-5 rating and clicks on add review button.  Finally for this page the user can see if their are any reviews submitted.  The review summary displayes use, date review submitted, review comments, movie rating and lastly a delete button to remove unwanted reviews. When the user clicks on the add a performer page they will see a list of performers alrady in their performers collection.  Next the user has a textbox called performer name followed by a date born textbox.  The user can enter the date born manually or the can select a date from a calendar.  The last item on this page is add a performer button to subit the performer name and date born fields.  The last link is add movie and on click the user will see a movie title textbox, release year, MPAA rating dropdown with the values of G, PG, PG-13, R and X (adults only), a checkbox of whether or not the movie is in theatres, the default is checked (in theatre's), and last but not least a add your movie button to submit your move to movie collection.   That is all for the user.
+    - AAU, I want to see my username in the nav bar when I'm logged in.
+AAU, I want to be able to make a profile with my first name, last name, and email address.
+AAU, if I see another user's plant that I like I want to be able to click a like button.
+AAU, if I see another user's plant that I like I want to be able to click a like button.
+AAU, I want to be able to log my plant's fertilizer/s and the fertilizing schedule, so I have a record of it.
+As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
+As a Visitor, upon browsing to the application, I want to be able to sign up to access and use all the features of the app.
+AAU, I want to be able to log in to add plants to my list.
+AAU, I want to be able to log out when I'm done using the app.
+As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
+AAU, I want to be able to make changes to my plant details when I'm logged in so that I can record my plant's progress.
+AAU, I want to be able to delete a plant I no longer have when I'm logged in.
+AAU, I want to be able to upload photos of my plant when I'm logged in.
+AAU, I want to be able to log my plant's watering schedule, so I can keep track of it.
+AAU, I want to be the only one who can update my plants.
+AAU, I want other logged in users to see all my plants and I want to be able to view other users' plants as well.
+AAU, I want to be the only one who can delete my plants.
+
 
 
 ### **Web App built with:**
