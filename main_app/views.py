@@ -167,11 +167,10 @@ def signup(request):
 def profile_of_user(request):
     """
     user's profile page
-    http://localhost:8000/profile/1/
+    http://localhost:8000/profile/
     """
-    logging.info('calling user_profile')
-    profile = Profile.objects.filter(user=request.user)
-    return render(request, 'registration/user_profile.html', {'profile': profile})
+    logging.info('calling profile_of_user')
+    return render(request, 'registration/user_profile.html')
 
 class ProfileCreate(LoginRequiredMixin, CreateView):
     """
