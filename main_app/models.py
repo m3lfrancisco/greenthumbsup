@@ -2,8 +2,8 @@ from django.db import models
 from django.urls import reverse
 # from datetime import date
 from django.contrib.auth.models import User
-# from django.db.models.signals import post_save
-# from django.dispatch import receiver
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -23,14 +23,14 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
     
-# @receiver(post_save, sender=User)
-# def user_profile_create(sender, instance, created, **kwargs):
-#     if created:
-#         Profile.objects.create(user=instance)
+@receiver(post_save, sender=User)
+def user_profile_create(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
 
-# @receiver(post_save, sender=User)
-# def user_profile_save(sender, instance, **kwargs):
-#     instance.profile.save()
+@receiver(post_save, sender=User)
+def user_profile_save(sender, instance, **kwargs):
+    instance.profile.save()
 
     # def get_absolute_url(self):
     #     return reverse('user_profile', kwargs={'pk':self.id})
