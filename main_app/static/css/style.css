@@ -22,3 +22,7 @@ header, main, footer {
         padding-left: 0;
     }
 }
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
