@@ -18,9 +18,9 @@ Green=$'\e[1;32m'
 Yellow=$'\e[1;33m'
 Blue=$'\e[1;34m'
 
-echo
+echo $Red
 git add .
-echo "$redback <><><><><><><><><><><><>"
+echo "<><><><><><><><><><><><>"
 echo
 echo "Enter commit message: "
 echo
@@ -28,22 +28,23 @@ read cmtMsg
 git commit -m "$cmtMsg"
 echo
 echo " <><><><><><><><><><><>"
-echo
+echo $Green
 git branch
 echo
-echo “$Green Type out the branch you wish to push to?”
+echo “Type out the branch you wish to push to?”
 echo
 read pushBranch
 echo
 git push origin $pushBranch
-echo "$green <><><><><><><><><><><>"
+echo $greenback
+echo "<><><><><><><><><><><>"
 echo
-echo "$Green Push complete :) "
+echo "Push complete :) "
 echo
-echo "$green <><><><><><><><><><><>"
-echo
-echo "$Blue Opening a browser tab for GH Pull Request..."
+echo "<><><><><><><><><><><>"
+echo $Blue
+echo "Opening a browser tab for GH Pull Request..."
 echo
 gh pr create -w
 echo
-$resetvid
+echo $resetvid
