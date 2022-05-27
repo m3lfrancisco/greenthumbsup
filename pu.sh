@@ -2,9 +2,12 @@
 logoansi=$'\e[38;5;0;48;5;148m'
 inversvid=$'\e[7m'
 resetvid=$'\e[0m'
-redback=$'\e[1;37;41m'
-greenback=$'\e[1;30;42m'
-blueback=$'\e[1;37;44m'
+blkredback=$'\e[1;30;41m'
+whtredback=$'\e[1;37;41m'
+blkgrnback=$'\e[1;30;42m'
+whtgrnback=$'\e[1;37;42m'
+blkbluback=$'\e[1;30;44m'
+whtbluback=$'\e[1;37;44m'
 black=$'\e[0;30'
 red=$'\e[0;31'
 green=$'\e[0;32'
@@ -25,14 +28,14 @@ echo
 read cmtMsg
 git commit -m "$cmtMsg"
 echo
-echo " <><><><><><><><><><><>"
-echo $greenback
+echo "<><><><><><><><><><><>"
+echo 
 git branch
 echo $Green
 echo “Type out the branch you wish to push to?”
 echo
 read pushBranch
-echo
+echo $blkgrnback
 git push origin $pushBranch
 echo $Yellow
 echo "<><><><><><><><><><><>"
