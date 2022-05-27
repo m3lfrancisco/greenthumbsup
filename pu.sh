@@ -28,9 +28,9 @@ read cmtMsg
 git commit -m "$cmtMsg"
 echo
 echo " <><><><><><><><><><><>"
-echo $Green
-git branch
 echo
+git branch
+echo $Green
 echo “Type out the branch you wish to push to?”
 echo
 read pushBranch
