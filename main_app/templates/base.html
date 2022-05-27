@@ -133,7 +133,7 @@
                             <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
                             <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
                             <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li>
-                            <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li>
+                            {% comment %} <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li> {% endcomment %}
                             {% comment %} <li><a href="{% url 'user_profile' %}">My Profile</a></li> {% endcomment %}
                             <li><a href="{% url 'logout' %}">Log Out</a></li>
                         {% else %}
@@ -148,10 +148,10 @@
 
 
                 {% comment %} Close Trigger {% endcomment %}
-                <ul id="slide-out" class="sidenav">
+                {% comment %} <ul id="slide-out" class="sidenav">
                     <li><a class="sidenav-close" href="#!">Clicking this will close Sidenav</a></li>
                 </ul>
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> {% endcomment %}
 
 
                 {% comment %} Dropdown HTML Structure {% endcomment %}
