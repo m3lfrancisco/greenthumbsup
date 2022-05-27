@@ -15,16 +15,16 @@
     <script src="https://kit.fontawesome.com/9c55a8de8f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    {% comment %} <header class="navbar-fixed"> {% endcomment %}
+    <header class="navbar-fixed">
         {% comment %} <nav class="nav-wrapper"> {% endcomment %}
-                    <header>
+                    {% comment %} <header>
                         <nav class="navbar navbar-light green lighten-4 mb-4">
                             <!-- Navbar brand -->
                             <a class="navbar-brand" href="#">Navbar</a>
                             <!-- Collapse button -->
                             <button class="navbar-toggler toggler-example aqua-gradient collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent43" aria-controls="navbarSupportedContent43" aria-expanded="false"
-                            aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
+                            aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-hamburger"></i></span></button>
                             <!-- Collapsible content -->
                             <div class="collapse navbar-collapse" id="navbarSupportedContent43">
                             <!-- Links -->
@@ -52,7 +52,7 @@
                                     {% comment %} <li class="nav-item">
                                         <a class="nav-link" href="{% url 'profiles_create' %}">Add a Profile</a>
                                     </li> {% endcomment %}
-                                    <li class="nav-item">
+                                    {% comment %} <li class="nav-item">
                                         <a class="nav-link" href="{% url 'profile' user.profile.id %}">My Profile</a>
                                     </li>
                                     <li class="nav-item">
@@ -69,7 +69,7 @@
 
                             </ul>
                         </div>
-                    </nav>
+                    </nav> {% endcomment %}
 
                 {% comment %} Fullscreen HTML Structure {% endcomment %}
                 {% comment %}<ul id="slide-out" class="sidenav">
@@ -88,7 +88,7 @@
                         <li><a href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
                 </ul>
-                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a> {% endcomment %}
 
             {% comment %} original base.html {% endcomment %}
             {% comment %} <div class="container">
@@ -116,7 +116,7 @@
 
         
                 {% comment %} Sidenav {% endcomment %}
-                {% comment %} <ul id="slide-out" class="sidenav">
+                <ul id="slide-out" class="sidenav">
                     <li><div class="user-view">
                             <div class="background">
                                 <img src="images/office.jpg">
@@ -135,7 +135,7 @@
                             <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li>
                             <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li>
                             {% comment %} <li><a href="{% url 'user_profile' %}">My Profile</a></li> {% endcomment %}
-                            {% comment %}<li><a href="{% url 'logout' %}">Log Out</a></li>
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
                         {% else %}
                             <li><a href="{% url 'signup' %}">Sign Up</a></li>
                             <li><a href="{% url 'login' %}">Log In</a></li>
@@ -148,7 +148,7 @@
 
 
                 {% comment %} Close Trigger {% endcomment %}
-                {% comment %} <ul id="slide-out" class="sidenav">
+                <ul id="slide-out" class="sidenav">
                     <li><a class="sidenav-close" href="#!">Clicking this will close Sidenav</a></li>
                 </ul>
                 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -222,7 +222,18 @@
             </div>
         </div>   
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>    
+        $(document).ready(function(){
+            $('.sidenav').sidenav({edge:'right'});
+        }); 
+    </script>
+
+    
+    {% comment %} <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> {% endcomment %}
+    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
