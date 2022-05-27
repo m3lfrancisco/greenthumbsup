@@ -164,7 +164,7 @@ def signup(request):
     return render(request, 'registration/signup.html', context)
 
 @login_required
-def profile_of_user(request):
+def profile(request):
     """
     user's profile page
     http://localhost:8000/profile/
@@ -184,14 +184,10 @@ class ProfileCreate(LoginRequiredMixin, CreateView):
 class ProfileUpdate(LoginRequiredMixin, UpdateView):
     """
     This class will update a profile object
-    http://localhost:8000/profile/1/update/
+    http://localhost:8000/profile/1/
     """
     model = Profile
     fields = '__all__'
-
-class UserProfile(LoginRequiredMixin, ListView):
-    
-    model = Profile
 
 class FertilizerList(LoginRequiredMixin, ListView):
     """
