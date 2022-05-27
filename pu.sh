@@ -36,13 +36,13 @@ echo
 read pushBranch
 echo
 git push origin $pushBranch
-echo $greenback
+echo $Yellow
 echo "<><><><><><><><><><><>"
 echo
 echo "Push complete :) "
 echo
 echo "<><><><><><><><><><><>"
-echo $resetvid $Blue
+echo $Blue
 echo "Opening a browser tab for GH Pull Request..."
 echo
 gh pr create -w
