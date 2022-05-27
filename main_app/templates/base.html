@@ -21,11 +21,11 @@
                             <!-- Navbar brand -->
                             <a class="navbar-brand" href="#">Navbar</a>
                             <!-- Collapse button -->
-                            <button class="navbar-toggler toggler-example green darken-3" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false"
+                            <button class="navbar-toggler toggler-example aqua-gradient collapsed" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent43" aria-controls="navbarSupportedContent43" aria-expanded="false"
                             aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
                             <!-- Collapsible content -->
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent41">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent43">
                             <!-- Links -->
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
@@ -51,9 +51,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{% url 'profiles_create' %}">Add a Profile</a>
                                     </li>
-                                    {% comment %} <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'profile_of_user' %}">My Profile</a>
-                                    </li> {% endcomment %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'profile' user.profile.id %}">My Profile</a>
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
                                     </li>
@@ -103,7 +103,7 @@
                         <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
                         <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li>
                         <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li>
-                        {% comment %} <li><a href="{% url 'profile_of_user' %}">My Profile</a></li> {% endcomment %}
+                        {% comment %} <li><a href="{% url 'profile' user.profile.id %}">My Profile</a></li> {% endcomment %}
                         {% comment %} <li><a href="{% url 'logout' %}">Log Out</a></li>
                     {% else %}
                         <li><a href="{% url 'signup' %}">Sign Up</a></li>
