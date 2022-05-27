@@ -9,5 +9,4 @@
 B `@krakensd`
 M `@m3lfrancisco`
 R `@roob19`
-
-`:octocat:`
+hagfiuadgha;f
