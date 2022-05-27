@@ -1,12 +1,10 @@
 #!/bin/bash
 logoansi=$'\e[38;5;0;48;5;148m'
-
 inversvid=$'\e[7m'
 resetvid=$'\e[0m'
 redback=$'\e[1;37;41m'
 greenback=$'\e[1;37;42m'
 blueback=$'\e[1;37;44m'
-
 black=$'\e[0;30'
 red=$'\e[0;31'
 green=$'\e[0;32'
