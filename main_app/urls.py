@@ -22,6 +22,6 @@ urlpatterns = [
     path('fertilizers/<int:pk>/delete/', views.FertilizerDelete.as_view(), name='fertilizers_delete'),
     path('accounts/signup/', views.signup, name='signup'),
     path('profile/create/', views.ProfileCreate.as_view(), name='profiles_create'),
-    path('profile/<int:user_id>/', views.UserProfile.as_view(), name='user_profile'),
+    path('profile/<int:pk>/', views.profile_of_user, name='profile_of_user'),
     path('profile/<int:pk>/update/', views.ProfileUpdate.as_view(), name='profiles_update'),
 ]

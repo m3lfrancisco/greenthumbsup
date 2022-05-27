@@ -18,6 +18,12 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)
 
+    def __str__(self):
+        return self.user
+    
+    # def get_absolute_url(self):
+    #     return reverse('user_profile', kwargs={'pk':self.id})
+
 class Fertilizer(models.Model):
     name = models.CharField(max_length=100)
 

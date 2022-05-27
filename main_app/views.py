@@ -163,6 +163,16 @@ def signup(request):
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
 
+@login_required
+def profile_of_user(request):
+    """
+    user's profile page
+    http://localhost:8000/profile/1/
+    """
+    logging.info('calling user_profile')
+    profile = Profile.objects.filter(user=request.user)
+    return render(request, 'registration/user_profile.html', {'profile': profile})
+
 class ProfileCreate(LoginRequiredMixin, CreateView):
     """
     This class will create a profile object
@@ -181,10 +191,7 @@ class ProfileUpdate(LoginRequiredMixin, UpdateView):
     fields = '__all__'
 
 class UserProfile(LoginRequiredMixin, ListView):
-    """
-    user profile page
-    http://localhost:8000/profile/1
-    """
+    
     model = Profile
 
 class FertilizerList(LoginRequiredMixin, ListView):
@@ -197,7 +204,7 @@ class FertilizerList(LoginRequiredMixin, ListView):
 class FertilizerDetail(LoginRequiredMixin, DetailView):
     """
     fertilizer detail page
-    http://localhost:8000/fertilizers/1
+    http://localhost:8000/fertilizers/1/
     """
     model = Fertilizer
 
