@@ -163,14 +163,14 @@ def signup(request):
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
 
-@login_required
-def profile(request):
-    """
-    user's profile page
-    http://localhost:8000/profile/
-    """
-    logging.info('calling profile')
-    return render(request, 'registration/profile.html')
+# @login_required
+# def profile(request):
+#     """
+#     user's profile page
+#     http://localhost:8000/profile/
+#     """
+#     logging.info('calling profile')
+#     return render(request, 'registration/profile.html')
 
 # class ProfileCreate(LoginRequiredMixin, CreateView):
 #     """
@@ -181,14 +181,14 @@ def profile(request):
 #     fields = '__all__'
 #     success_url = '/profile/'
 
-class ProfileUpdate(LoginRequiredMixin, UpdateView):
-    """
-    This class will update a profile object
-    http://localhost:8000/profile/1/
-    """
-    model = Profile
-    fields = '__all__'
-    success_url = '/profile/'
+# class ProfileUpdate(LoginRequiredMixin, UpdateView):
+#     """
+#     This class will update a profile object
+#     http://localhost:8000/profile/1/
+#     """
+#     model = Profile
+#     fields = '__all__'
+#     success_url = '/profile/'
 
 class FertilizerList(LoginRequiredMixin, ListView):
     """
