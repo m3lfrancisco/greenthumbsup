@@ -20,9 +20,10 @@ R `@roob19`
 ### <center>Launch: [**Here**](https://greenthumbsup.herokuapp.com//)</center>
 
 <center>### **How-It Works a user story:**</center>
-    *AAU, I want to see my username in the nav bar when I'm logged in.
-* AAU, I want to be able to make a profile with my first name, last name, and email address.
-* AAU, if I see another user's plant that I like I want to be able to click a like button.
+1. AAU, I want to see my username in the nav bar when I'm logged in.
+2. AAU, I want to be able to make a profile with my first name, last name, and email address.
+## AAU, if I see another user's plant that I like I want to be able to click a like button.
+## AAU, if I see another user's plant that I like I want to be able to click a like button.
 AAU, if I see another user's plant that I like I want to be able to click a like button.
 AAU, I want to be able to log my plant's fertilizer/s and the fertilizing schedule, so I have a record of it.
 As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
