@@ -19,11 +19,20 @@
 
                 {% comment %} Fullscreen HTML Structure {% endcomment %}
                 <ul id="slide-out" class="sidenav">
-                    <li><a href="#!">First Sidebar Link</a></li>
-                    <li><a href="#!">Second Sidebar Link</a></li>
-                    <li><a href="#!">Third Sidebar Link</a></li>
-                    <li><a href="#!">Fourth Sidebar Link</a></li>
-                    <li><a href="#!">Five Sidebar Link</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'index' %}">View All Plants</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'my_plants' %}">My Plants</a></li>
+                        <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
+                        <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
+                        <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li>
+                        <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li>
+                        <li><a href="{% url 'user_profile' %}">My Profile</a></li>
+                        <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                        <li><a href="{% url 'login' %}">Log In</a></li>
+                    {% endif %}
                 </ul>
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
 
