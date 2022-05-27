@@ -82,11 +82,6 @@
                             <span class="card-title">
                                 <span>{{ fertilizer.name }}</span> 
                             </span>
-                            {% comment %} <form method="post" action="{% url 'add_fertilizing' plant.id %}">
-                                {% csrf_token %}
-                                {{ fertilizing_form.as_p }}
-                                <input type="submit" class="btn" value="Fertilize">
-                            </form> {% endcomment %}
                         </div>
                         <div class="card-action">
                             <form action="{% url 'unassoc_fertilizer' plant.id fertilizer.id %}" method="post">
@@ -96,19 +91,6 @@
                         </div>
                     </div>
                 {% endfor %}
-                {% comment %} <table class="striped">
-                    <thead>
-                        <tr><th>Date</th><th>Frequency</th></tr>
-                    </thead>
-                    <tbody>
-                        {% for fertservice in plant.fertservice_set.all %}
-                            <tr>
-                                <td>{{fertservice.fertilize_date}}</td>
-                                <td>{{fertservice.frequency}}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table> {% endcomment %}
             {% else %}
                 <h5 class="cyan-text">No Fertilizers :(</h5>
             {% endif %}

@@ -58,7 +58,6 @@ def plants_detail(request, plant_id):
     return render(request, 'plants/detail.html', {
         'plant': plant, 
         'watering_form': WateringForm,
-        # 'fertilizing_form': FertAndServiceForm,
         'fertilizers': fertilizers_plant_doesnt_have
         })
 
@@ -103,23 +102,6 @@ def add_watering(request, plant_id):
         new_watering.save()
     return redirect('detail', plant_id=plant_id)
 
-# def add_fertilizing(request, plant_id):
-#     form = FertilizingForm(request.POST)
-#     if form.is_valid():
-#         new_fertilizer = form.save(commit=False)
-#         new_fertilizer.plant_id = plant_id
-#         new_fertilizer.save()
-#     return redirect('detail', plant_id=plant_id)
-
-# def add_fertilizing(request, plant_id):
-#     form = FertAndServiceForm(request.POST)
-#     if form.is_valid():
-#         new_fertilizer = form.save(commit=False)
-#         new_fertilizer.plant_id = plant_id
-#         new_fertilizer.save()
-#         logging.info('calling add_fertilizing form.is_valid')
-#     return redirect('detail', plant_id=plant_id)
-
 @login_required
 def add_photo(request, plant_id):
     photo_file = request.FILES.get('photo-file', None)
@@ -162,33 +144,6 @@ def signup(request):
     form = UserCreationForm()
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
-
-# @login_required
-# def profile(request):
-#     """
-#     user's profile page
-#     http://localhost:8000/profile/
-#     """
-#     logging.info('calling profile')
-#     return render(request, 'registration/profile.html')
-
-# class ProfileCreate(LoginRequiredMixin, CreateView):
-#     """
-#     This class will create a profile object
-#     http://localhost:8000/profile/create/
-#     """
-#     model = Profile
-#     fields = '__all__'
-#     success_url = '/profile/'
-
-# class ProfileUpdate(LoginRequiredMixin, UpdateView):
-#     """
-#     This class will update a profile object
-#     http://localhost:8000/profile/1/
-#     """
-#     model = Profile
-#     fields = '__all__'
-#     success_url = '/profile/'
 
 class FertilizerList(LoginRequiredMixin, ListView):
     """
