@@ -169,17 +169,17 @@ def profile(request):
     user's profile page
     http://localhost:8000/profile/
     """
-    logging.info('calling profile_of_user')
-    return render(request, 'registration/user_profile.html')
+    logging.info('calling profile')
+    return render(request, 'registration/profile.html')
 
-class ProfileCreate(LoginRequiredMixin, CreateView):
-    """
-    This class will create a profile object
-    http://localhost:8000/profile/create/
-    """
-    model = Profile
-    fields = '__all__'
-    success_url = '/profile/'
+# class ProfileCreate(LoginRequiredMixin, CreateView):
+#     """
+#     This class will create a profile object
+#     http://localhost:8000/profile/create/
+#     """
+#     model = Profile
+#     fields = '__all__'
+#     success_url = '/profile/'
 
 class ProfileUpdate(LoginRequiredMixin, UpdateView):
     """
@@ -188,6 +188,7 @@ class ProfileUpdate(LoginRequiredMixin, UpdateView):
     """
     model = Profile
     fields = '__all__'
+    success_url = '/profile/'
 
 class FertilizerList(LoginRequiredMixin, ListView):
     """
