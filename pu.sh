@@ -42,7 +42,7 @@ echo
 echo "Push complete :) "
 echo
 echo "<><><><><><><><><><><>"
-echo $Blue
+echo $resetvid $Blue
 echo "Opening a browser tab for GH Pull Request..."
 echo
 gh pr create -w
