@@ -37,6 +37,7 @@ echo
 read pushBranch
 echo $blkgrnback
 git push origin $pushBranch
+echo $resetvid
 echo $Yellow
 echo "<><><><><><><><><><><>"
 echo
