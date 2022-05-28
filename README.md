@@ -24,7 +24,6 @@ R `@roob19`
 **AAU, I want to be able to make a profile with my first name, last name, and email address.**
 **AAU, if I see another user's plant that I like I want to be able to click a like button.
 **AAU, if I see another user's plant that I like I want to be able to click a like button.
-**AAU, if I see another user's plant that I like I want to be able to click a like button.
 **AAU, I want to be able to log my plant's fertilizer/s and the fertilizing schedule, so I have a record of it.
 **As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
 **As a Visitor, upon browsing to the application, I want to be able to sign up to access and use all the features of the app.
@@ -46,15 +45,13 @@ HTML
 CSS
 Python
 Django
-Materialize
 Heroku
 VS Code
-Postman
 GitHub
 Classmates
 Lectures
 Bootstrap
-Putty
+
 
 
 ### **Future Enhancements:**
@@ -70,19 +67,13 @@ Putty
 * Not to sleep and code
 * Troubleshooting
 * Database connection strings
-* Google OAuth2
-* Bounce Nodemon more often
 * --tail logs
 * Better understanding of VS Code
-* Better understanding of VS Code Extensions (Azure)
 * Learn more tools (Postman, Studio 3T)
 * Time Management and the lack of
-* Mongoose
-* Express
 * Better understanding of GitHub's value
 * Don't be stubborn - Ask for HELP!!!
 * Don't bite off more than you can chew
-* Don't decice on an API and code around it - Atleast not yet
 * If it works roll with it
 * Go big down the road
 ** Rest
