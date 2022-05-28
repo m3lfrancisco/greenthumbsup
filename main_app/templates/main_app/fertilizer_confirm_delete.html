@@ -7,10 +7,10 @@
 
 <form action="" method="POST">
     {% csrf_token %}
-    <button class="btn-floating btn-large waves-effect waves-light red" type="submit" name="action">
-        <i class="material-icons">delete</i>
+    <button class="btn btn-success" type="submit" name="action">
+        <i class="btn btn-danger">delete</i>
     </button>
-    <a class="btn waves-effect waves-light" href="{% url 'fertilizers_detail' object.id %}">Cancel</a>
+    <a class="btn btn-warning" href="{% url 'fertilizers_detail' object.id %}">Cancel</a>
 </form>
 
 {% endblock %}

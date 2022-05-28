@@ -36,7 +36,7 @@
                 {% csrf_token %}
                 <input type="file" name="photo-file">
                 <br><br>
-                <input type="submit" class="btn" value="Upload Photo">
+                <input type="submit" class="btn btn-success" value="Upload Photo">
             </form>
         {% else %}
         
@@ -48,7 +48,7 @@
             <form method="post" action="{% url 'add_watering' plant.id %}">
                 {% csrf_token %}
                 {{ watering_form.as_p }}
-                <input type="submit" class="btn" value="Add Watering">
+                <input type="submit" class="btn btn-success" value="Add Watering">
             </form>
         {% else %}
         
@@ -86,7 +86,7 @@
                         <div class="card-action">
                             <form action="{% url 'unassoc_fertilizer' plant.id fertilizer.id %}" method="post">
                                 {% csrf_token %}
-                                <button type="submit" class="btn waves-effect waves-light">Remove</button>
+                                <button type="submit" class="btn btn-success">Remove</button>
                             </form>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                         <div class="card-action">
                             <form action="{% url 'assoc_fertilizer' plant.id fertilizer.id %}" method="post">
                                 {% csrf_token %}
-                                <button type="submit" class="btn waves-effect waves-light">Add</button>
+                                <button type="submit" class="btn btn-success">Add</button>
                             </form>
                         </div>
                     </div>
