@@ -8,26 +8,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Green Thumbs Up</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> {% endcomment %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> {% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="https://kit.fontawesome.com/9c55a8de8f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3e5547">
-        <div class="container-xxl">
-            <button class="navbar-toggler btn btn-success" style="background-color: #249b3c; border-color: #87ca46" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>&emsp;
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #3e5547">
+        <div class="container-fluid">
             <a class="navbar-brand text-success" href="{% url 'home' %}">
-                <i class="fa-solid fa-leaf"></i>
+                <span class="material-icons">thumb_up</span>
+                <i class="fa fa-leaf" aria-hidden="true"></i>
                 <span class="fw-bold">&nbsp;&nbsp;Green Thumbs Up</span>
             </a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <button class="navbar-toggler btn btn-success" style="background-color: #249b3c; border-color: #87ca46" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>&emsp;
+            <div class="collapse navbar-collapse justify-content-end align-center" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}">About</a>
@@ -36,231 +40,37 @@
                         <a class="nav-link" href="{% url 'index' %}">Community Plants</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'my_plants' %}">My Plants</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'plants_create' %}">Add a Plant</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'fertilizers_create' %}">Add a Fertilizer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'fertilizers_index' %}">All Fertilizers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'my_plants' %}">My Plants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'plants_create' %}">Add a Plant</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'fertilizers_create' %}">Add a Fertilizer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'fertilizers_index' %}">All Fertilizers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                        </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Log In</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                        </li>
                     {% endif %}
                 </ul>
-                {% comment %} <form class="d-flex" role="search">
+                {% comment %} <form class="d-flex" role="search"> 
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> {% endcomment %}
+                </form>   {% endcomment %}
             </div>
         </div>
-    </nav>        
-    {% comment %} <header class="navbar-fixed"> {% endcomment %}
-
-        {% comment %} <nav class="nav-wrapper"> {% endcomment %}
-                    {% comment %} <header>
-                        <nav class="navbar navbar-light green lighten-4 mb-4">
-                            <!-- Navbar brand -->
-                            <a class="navbar-brand" href="#">Navbar</a>
-                            <!-- Collapse button -->
-                            <button class="navbar-toggler toggler-example aqua-gradient collapsed" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent43" aria-controls="navbarSupportedContent43" aria-expanded="false"
-                            aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-hamburger"></i></span></button>
-                            <!-- Collapsible content -->
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent43">
-                            <!-- Links -->
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'about' %}">About</a>
-                                </li>
-                                
-                                {% if user.is_authenticated %}
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'my_plants' %}">My Plants</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'plants_create' %}">Add a Plant</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'fertilizers_create' %}">Add a Fertilizer</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'fertilizers_index' %}">View All Fertilizers</a>
-                                    </li>
-                                    {% comment %} <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'profiles_create' %}">Add a Profile</a>
-                                    </li> {% endcomment %}
-                                    {% comment %} <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'profile' user.profile.id %}">My Profile</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
-                                    </li>
-                                {% else %}
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'login' %}">Log In</a>
-                                    </li>
-                                {% endif %}
-
-                            </ul>
-                        </div>
-                    </nav> {% endcomment %}
-
-                {% comment %} Fullscreen HTML Structure {% endcomment %}
-                {% comment %}<ul id="slide-out" class="sidenav">
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'index' %}">View All Plants</a></li>
-                    {% if user.is_authenticated %}
-                        <li><a href="{% url 'my_plants' %}">My Plants</a></li>
-                        <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
-                        <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
-                        <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li>
-                        <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li>
-                        {% comment %} <li><a href="{% url 'user_profile' %}">My Profile</a></li> {% endcomment %}
-                        {% comment %} <li><a href="{% url 'logout' %}">Log Out</a></li>
-                    {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'login' %}">Log In</a></li>
-                    {% endif %}
-                </ul>
-                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a> {% endcomment %}
-
-            {% comment %} original base.html {% endcomment %}
-            {% comment %} <div class="container">
-                <ul>
-                    <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Green Thumbs Up</a></li>
-                </ul>
-                <ul class="right">
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'index' %}">View All Plants</a></li>
-                    {% if user.is_authenticated %}
-                        <li><a href="{% url 'my_plants' %}">My Plants</a></li>
-                        <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
-                        <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
-                        <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li>
-                        <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li>
-                        {% comment %} <li><a href="{% url 'profile' user.profile.id %}">My Profile</a></li> {% endcomment %}
-                        {% comment %} <li><a href="{% url 'logout' %}">Log Out</a></li>
-                    {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'login' %}">Log In</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-
-                {% comment %} Sidenav {% endcomment %}
-                {% comment %} <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul id="slide-out" class="sidenav">
-                    <li><div class="user-view">
-                            <div class="background"> {% endcomment %}
-                                {% comment %} <img src="images/office.jpg"> {% endcomment %}
-                            {% comment %} </div> {% endcomment %}
-                        {% comment %} <a href="#user"><img class="circle" src="images/yuna.jpg"></a> {% endcomment %}
-                        {% comment %} <a href="#name"><span class="white-text name">John Doe</span></a>
-                        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-                    </div></li>
-                        <li><a href="{% url 'home' %}"><i class="material-icons">cloud</i>Home Link With Icon</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'index' %}">View All Plants</a></li>
-                        {% if user.is_authenticated %}
-                            <li><a href="{% url 'my_plants' %}">My Plants</a></li>
-                            <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
-                            <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
-                            <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li> {% endcomment %}
-                            {% comment %} <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li> {% endcomment %}
-                            {% comment %} <li><a href="{% url 'user_profile' %}">My Profile</a></li> {% endcomment %}
-                            {% comment %} <li><a href="{% url 'logout' %}">Log Out</a></li>
-                        {% else %}
-                            <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                            <li><a href="{% url 'login' %}">Log In</a></li>
-                        {% endif %}
-                        <li><div class="divider"></div></li>
-                        <li><a class="subheader">Subheader</a></li>
-                        <li><a class="waves-effect" href="{% url 'home' %}">Home Link With Waves</a></li>
-                </ul> {% endcomment %}
-
-                {% comment %} Close Trigger {% endcomment %}
-                {% comment %} <ul id="slide-out" class="sidenav">
-                    <li><a class="sidenav-close" href="#!">Clicking this will close Sidenav</a></li>
-                </ul>
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> {% endcomment %}
-
-
-                {% comment %} Dropdown HTML Structure {% endcomment %}
-                {% comment %} <ul id="slide-out" class="sidenav">
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'index' %}">View All Plants</a></li>
-                    <li class="no-padding">
-                        <ul class="collapsible collapsible-accordion">
-                            <li>
-                            <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
-                            <div class="collapsible-body">
-                            <ul>
-                                <li><a href="{% url 'about' %}">About</a></li>
-                                <li><a href="{% url 'index' %}">View All Plants</a></li>
-                                {% if user.is_authenticated %}
-                                    <li><a href="{% url 'my_plants' %}">My Plants</a></li>
-                                    <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
-                                    <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
-                                    <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li>
-                                    <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li>
-                                    {% comment %} <li><a href="{% url 'user_profile' %}">My Profile</a></li> {% endcomment %}
-                                    {% comment %} <li><a href="{% url 'logout' %}">Log Out</a></li>
-                                {% else %}
-                                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                                    <li><a href="{% url 'login' %}">Log In</a></li>
-                                {% endif %}
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul class="right hide-on-med-and-down">
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'index' %}">View All Plants</a></li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'index' %}">View All Plants</a></li>
-                        {% if user.is_authenticated %}
-                            <li><a href="{% url 'my_plants' %}">My Plants</a></li>
-                            <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
-                            <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
-                            <li><a href="{% url 'fertilizers_index' %}">View All Fertilizers</a></li>
-                            <li><a href="{% url 'profiles_create' %}">Add A Profile</a></li>
-                            {% comment %} <li><a href="{% url 'user_profile' %}">My Profile</a></li> {% endcomment %}
-                            {% comment %} <li><a href="{% url 'logout' %}">Log Out</a></li>
-                        {% else %}
-                            <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                            <li><a href="{% url 'login' %}">Log In</a></li>
-                        {% endif %}
-                    </ul>
-                  </ul>
-                  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> 
-                  
-{% endcomment %}
-
-    {% comment %} </header> {% endcomment %}
+    </nav>
 
     <main class="container">
         {% block content %}
@@ -270,18 +80,10 @@
     <footer class="page-footer" style="background-color: #3e5547">
         <div class="row">
             <div class="col s12">
-                <div class="right">All Rights Reserved, &copy; 2022 Team BMR &nbsp;</div>
+                <div class="right fw-bold">All Rights Reserved, &copy; 2022 Team BMR &nbsp;</div>
             </div>
         </div>   
     </footer>
 
-    {% comment %} <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>    
-        $(document).ready(function(){
-            $('.sidenav').sidenav({edge:'right'});
-        }); 
-    </script> {% endcomment %}
-
-    </body>
+</body>
 </html>
