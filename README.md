@@ -19,55 +19,48 @@ R `@roob19`
 
 ### <center>Launch: [**Here**](https://greenthumbsup.herokuapp.com//)</center>
 
-<center>### **How-It Works a user story:**</center>
-# 1. AAU, I want to see my username in the nav bar when I'm logged in.
-# 2. AAU, I want to be able to make a profile with my first name, last name, and email address.**
-# 3.  AAU, if I see another user's plant that I like I want to be able to click a like button.
-# 4.  AAU, if I see another user's plant that I like I want to be able to click a like button.
-# 5. AAU, if I see another user's plant that I like I want to be able to click a like button.
-# 6. AAU, I want to be able to log my plant's fertilizer/s and the fertilizing schedule, so I have a record of it.
-# 7. As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
-# 8. As a Visitor, upon browsing to the application, I want to be able to sign up to access and use all the features of the app.
-# 9. AAU, I want to be able to log in to add plants to my list.
-# 10. AAU, I want to be able to log out when I'm done using the app.
-# 11. As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
-# 12. AAU, I want to be able to make changes to my plant details when I'm logged in so that I can record my plant's progress.
-# 13. AAU, I want to be able to delete a plant I no longer have when I'm logged in.
-# 14. AAU, I want to be able to upload photos of my plant when I'm logged in.
-# 15. AAU, I want to be able to log my plant's watering schedule, so I can keep track of it.
-# 16. AAU, I want to be the only one who can update my plants.
-# 17. AAU, I want other logged in users to see all my plants and I want to be able to view other users' plants as well.
-# 18. AAU, I want to be the only one who can delete my plants.
-# 19. **
+### **How-It Works a user story:**
+**AAU, I want to see my username in the nav bar when I'm logged in.
+**AAU, I want to be able to make a profile with my first name, last name, and email address.**
+**AAU, if I see another user's plant that I like I want to be able to click a like button.
+**AAU, if I see another user's plant that I like I want to be able to click a like button.
+**AAU, if I see another user's plant that I like I want to be able to click a like button.
+**AAU, I want to be able to log my plant's fertilizer/s and the fertilizing schedule, so I have a record of it.
+**As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
+**As a Visitor, upon browsing to the application, I want to be able to sign up to access and use all the features of the app.
+**AAU, I want to be able to log in to add plants to my list.
+**AAU, I want to be able to log out when I'm done using the app.
+**As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
+**AAU, I want to be able to make changes to my plant details when I'm logged in so that I can record my plant's progress.
+**AAU, I want to be able to delete a plant I no longer have when I'm logged in.
+**AAU, I want to be able to upload photos of my plant when I'm logged in.
+**AAU, I want to be able to log my plant's watering schedule, so I can keep track of it.
+**AAU, I want to be the only one who can update my plants.
+**AAU, I want other logged in users to see all my plants and I want to be able to view other users' plants as well.
+**AAU, I want to be the only one who can delete my plants.
 
-1. 
-2. ### **Web App built with:**
-3. * HTML
-4. **** CSS
-5. JS
-6. Mongodb
-7. mongoose
-8. express
-9. CRUD
-10. Heroku
-11. Google Oath2
-12. VS Code
-13. Nodejs
-14. Postman
-15. Passport
-16. Azure Extension for VS Code and many more.
-17. Studio 3T
-18. World of API's
-19. GitHub
-20. Classmates
-21. Lectures
-22. Bootstrap
-23. Putty
+
+ 
+### **Web App built with:**
+HTML
+CSS
+Python
+Django
+Materialize
+Heroku
+VS Code
+Postman
+GitHub
+Classmates
+Lectures
+Bootstrap
+Putty
 
 
 ### **Future Enhancements:**
 * Pretty it up.
 * Add and Consume 3rd party API's.
+* Add Facebook OAuth
 * Make it mobile ready and lite.
 * Add more routes, controllers and views to consume more data to add more collections 
 * Data-Data-Data 
@@ -92,7 +85,7 @@ R `@roob19`
 * Don't decice on an API and code around it - Atleast not yet
 * If it works roll with it
 * Go big down the road
-* Rest
+** Rest
 
 ### ****What** went Bad:**
 * Where to start so many things were bad
