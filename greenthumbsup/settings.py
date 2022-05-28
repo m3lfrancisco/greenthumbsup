@@ -81,9 +81,10 @@ WSGI_APPLICATION = 'greenthumbsup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'greenthumbsup',
-        'USER': 'myappuser',
-        'PASSWORD': 'mypass',
+        'NAME': 'd6m8krcajtvsps',
+        'USER': 'cdhakkjzinurlo',
+        'PASSWORD': 'bad0874ec726b02536b88e41d1b2323f90009a400da16743444e477bfc0bf4fb',
+        'HOST':'ec2-34-231-177-125.compute-1.amazonaws.com'
     }
 }
 
