@@ -4,40 +4,15 @@
 {% if object %}
     <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
 {% else %}
-    <h1 class="display-1">Add a Plant</h1>
+    <h1>Add a Plant</h1>
 {% endif %}
 
 <form action="" method="POST">
     {% csrf_token %}
-        <table class="container-sm text-right align-middle">
+        <table>
             {{ form.as_table }}
         </table>
-    <input type="submit" value="Submit!" class="btn btn-success">
+    <input type="submit" value="Submit!" class="btn">
 </form>
-
-<section class="container">
-    <h3 class="pt-4 pb-2">Bootstrap Datepicker</h3>
-    <form>
-        <div class="row form-group">
-            <label for="date" class="col-sm-1 col-form-label">Date</label>
-            <div class="col-sm-4">
-                <div class="input-group date" id="datepicker">
-                    <input type="text" class="form-control">
-                    <span class="input-group-append">
-                        <span class="input-group-text bg-white d-block">
-                        <i class="fa fa-calendar"></i>
-                        </span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </form>
-</section>
-
-<script type="text/javascript">
-    $(function() {
-        $('#datepicker').datepicker();
-    });
-</script>
 
 {% endblock %}
