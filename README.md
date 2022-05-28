@@ -106,3 +106,4 @@ Putty
 
 ### **Thanks to:**
 * Everyone who gave me help and encouragement.
+Inline `code` has `back-ticks around` it.
