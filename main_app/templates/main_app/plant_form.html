@@ -9,18 +9,10 @@
 
 <form action="" method="POST">
     {% csrf_token %}
-        <div class="container-sm text-right align-middle">
+        <table class="container-sm text-right align-middle">
             {{ form.as_table }}
-        </div>
+        </table>
     <input type="submit" value="Submit!" class="btn">
 </form>
-
-<script>
-    const dateEl = document.getElementById('id_adoption_date');
-    M.Datepicker.init(dateEl, {
-        format: 'yyyy-mm-dd',
-        autoClose: true
-    });
-</script>
 
 {% endblock %}
