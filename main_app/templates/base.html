@@ -24,13 +24,18 @@
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #3e5547">
         <div class="container-fluid">
             <a class="navbar-brand text-success" href="{% url 'home' %}">
-                <span class="material-icons">thumb_up</span>
-                <i class="fa fa-leaf" aria-hidden="true"></i>
-                <span class="fw-bold">&nbsp;&nbsp;Green Thumbs Up</span>
+
+                &ensp;<span class="material-icons">thumb_up</span>
+                &ensp;<span class="material-icons fa-flip-horizontal">thumb_up</span>
+                {% comment %} <i class="fa fa-leaf" aria-hidden="true"></i> {% endcomment %}
+                &ensp;<span class="fw-bold">Green Thumbs Up</span>
+                &ensp;<i class="fa-solid fa-thumbs-up"></i>
+                &ensp;<i class="fa-solid fa-thumbs-down fa-rotate-180"></i>
+
             </a>
             <button class="navbar-toggler btn btn-success" style="background-color: #249b3c; border-color: #87ca46" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>&emsp;
+            </button>
             <div class="collapse navbar-collapse justify-content-end align-center" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Fertilizer List</h1>
+<h1 class="display-1">Fertilizer List</h1>
 
 {% for fertilizer in fertilizer_list %}
     <a href="{% url 'fertilizers_detail' fertilizer.id %}">
