@@ -22,8 +22,9 @@
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="material-icons">menu</i>
                 </a>
-                <a class="brand-logo hide-on-large-only" href="{% url 'home' %}">
-                    <i class="material-icons">thumb_up</i><span>&nbsp;&nbsp;Green Thumbs Up</span>
+                <a class="brand-logo hide-on-large-only" style="white-space: nowrap;" href="{% url 'home' %}">
+                    &nbsp;<i class="material-icons">thumb_up</i>&nbsp;<span>Green Thumbs Up</span>&nbsp;
+                    {% comment %} &nbsp;<i class="material-icons" style="transform: scaleX(-1)">thumb_up</i> {% endcomment %}
                     {% comment %} <i class="fa-solid fa-leaf"></i>&nbsp;&nbsp;Green Thumbs Up {% endcomment %}
                 </a>
                 <ul class="hide-on-med-and-down">
