@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 style="color: #6d4c41">Login</h1>
+<h1 class="center-align" style="color: #6d4c41">Login</h1>
 
 <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
