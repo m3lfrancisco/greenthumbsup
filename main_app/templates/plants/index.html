@@ -11,7 +11,7 @@
                     <div class="card-content" style="background-color: #FFFDE7; color: #0288d1">
                         <span class="card-title">{{ plant.name }}</span>
                         {% for photo in plant.photo_set.all %}
-                            <img class="responsive-img card-panel" src="{{photo.url}}">
+                            <img class="responsive-img card-panel" src="{{photo.url}}" style="white-space: nowrap;">
                         {% empty %}
                             <div class="card-panel teal-text center-align">No Photos Uploaded</div>
                         {% endfor %}

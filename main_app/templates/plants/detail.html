@@ -17,9 +17,9 @@
             {% if user == plant.user %}
                 <div class="card-action">
                     <a class="btn-floating waves-effect waves-light orange" href="{% url 'plants_update' plant.id %}"><i class="material-icons">edit</i></a>
-                    <span>Edit</span>
+                    <span>EDIT</span>
                     <a class="btn-floating waves-effect waves-light red" href="{% url 'plants_delete' plant.id %}" class="red-text"><i class="material-icons">delete</i></a>
-                    <span>Delete</span>
+                    <span>DELETE</span>
                 </div>
             {% else %}
                 <div class="card-action">
@@ -33,24 +33,28 @@
             <div class="card-panel teal-text center-align">No Photos Uploaded</div>
         {% endfor %}
 
-        {% if user == plant.user %}
-            <form action="{% url 'add_photo' plant.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
-                {% csrf_token %}
-                <input type="file" name="photo-file">
-                <br><br>
-                <input type="submit" class="btn btn-success" value="Upload Photo">
-            </form>
-        {% else %}
-        
-        {% endif %}
-
+        <div class="card">
+            <div class="card-content" style="background-color: #FFFDE7">
+                {% if user == plant.user %}
+                    <form action="{% url 'add_photo' plant.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+                        {% csrf_token %}
+                        <input type="file" name="photo-file">
+                        <br><br>
+                        <a  class="waves-effect waves-light btn"><i class="material-icons right">file_upload</i>UPLOAD</a>
+                    </form>
+                {% else %}
+                
+                {% endif %}
+            </div>
+        </div>
     </div>
+
     <div class="col s6">
         {% if user == plant.user %}
             <form method="post" action="{% url 'add_watering' plant.id %}">
                 {% csrf_token %}
                 {{ watering_form.as_p }}
-                <input type="submit" class="btn btn-success" value="Add Watering">
+                <input type="submit" class="btn" value="Add Watering">
             </form>
         {% else %}
         
@@ -108,7 +112,7 @@
             {% if fertilizers.count %}
                 {% for fertilizer in fertilizers.all %}
                     <div class="card">
-                        <div class="card-content">
+                        <div class="card-content" style="background-color: #FFFDE7">
                             <span class="card-title">
                                 <span>{{ fertilizer.name }}</span>
                             </span>
