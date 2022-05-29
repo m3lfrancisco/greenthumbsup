@@ -14,9 +14,9 @@ footer.page-footer {
     text-align: right;
 }
 
-header, footer {
+/* header, footer {
     padding-left: 300px;
-}
+} */
 
 nav ul li:hover {
     background-color: #18FFFF;
@@ -24,7 +24,7 @@ nav ul li:hover {
 }
 
 .sidenav li:hover {
-    background-color: #18FFFF;
+    background-color: #A7FFEB;
 }
 
 @media only screen and (max-width: 992px) {
