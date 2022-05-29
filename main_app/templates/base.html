@@ -16,7 +16,7 @@
 </head>
 <body>
     <header class="navbar-fixed">
-        <nav>
+        <nav style="background-color: #006064">
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo"></a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
@@ -41,7 +41,7 @@
         </nav>
     </header>
 
-    <ul class="sidenav" id="mobile-links">
+    <ul class="sidenav" id="mobile-links" style="background-color: #FFE082">
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
         <li><a href="{% url 'index' %}">Community Plants</a></li>
@@ -116,7 +116,7 @@
         {% endblock %}
     </main>
 
-    <footer class="page-footer" style="background-color: #3e5547">
+    <footer class="page-footer" style="background-color: #006064; color: #18FFFF">
         <div class="right">All Rights Reserved, &copy; 2022 Team BMR &nbsp;</div>
     </footer>
 
