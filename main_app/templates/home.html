@@ -2,7 +2,31 @@
 
 {% block content %}
 
-<h1 class="center-align">Green Thumbs Up</h1>
+{% comment %} <h1 class="center-align" style="color: #6D4C41;">Green Thumbs Up</h1> {% endcomment %}
+
+<h1 id="web-title" class="center" style="color: #6D4C41;">Green Thumbs Up</h1>
+<div class="container">
+    <div class="carousel">
+        {% for photo in photos|slice:"0:10" %}
+        <a class="carousel-item" href="{% url 'index' %}"><img src="{{ photo.url }}"></a>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var elements = document.querySelector('.carousel');
+        var instances = M.Carousel.init(elements, {});
+    });
+
+    $(document).ready(function(){
+        $('.carousel').carousel();
+    });
+
+</script>
+
+
 
 <div>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -42,6 +66,7 @@
         <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_xsg73jmq.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
 
 </div>
+
 
 
 {% endblock %}

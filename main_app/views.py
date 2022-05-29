@@ -18,7 +18,8 @@ def home(request):
     home view
     http://localhost:8000/
     """
-    return render(request, 'home.html')
+    photos = Photo.objects.all()
+    return render(request, 'home.html', {'photos': photos})
 
 def about(request):
     """
