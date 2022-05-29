@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="">All Community Plants</h1>
+<h1 class="" style="color: #006064">All Community Plants</h1>
 
 {% for plant in plants %}
     <div class="card">
-        <div class="card-content">
+        <div class="card-content" style="background-color: #FFFDE7; color: #006064">
             <span class="card-title">{{ plant.name }}</span>
             {% for photo in plant.photo_set.all %}
                 <img class="responsive-img card-panel" src="{{photo.url}}">

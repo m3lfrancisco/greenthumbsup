@@ -2,7 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #dfd9cb;
+    background-color: #EEEEEE;
 }
 
 main {
@@ -16,6 +16,15 @@ footer.page-footer {
 
 header, footer {
     padding-left: 300px;
+}
+
+nav ul li:hover {
+    background-color: #18FFFF;
+    text-shadow: 1px 1px 2px #006064;
+}
+
+.sidenav li:hover {
+    background-color: #18FFFF;
 }
 
 @media only screen and (max-width: 992px) {
