@@ -1,109 +1,143 @@
-<center><h1>GREEN THUMBS UP</h1>
-<center><h3><samp>"Where <em>they</em> go to <strong>grow!"</strong></samp></h3>
+<h1><p style="color:green;text-align:center;font-size:55px;"><B>WELCOME TO GREENTHUMBSUP</B></p></h1>
+
+
+<h2><p style="color:green;text-align:center;font-size:40px;"><B>Where Users Come To GROW</B></p></h2>
 
 
 
-<center><h4>Team BMR</h4>
-<center><h4>beamers</h5>
-
-B `@krakensd`
-M `@m3lfrancisco`
-R `@roob19`
+<h3><p style="color:green;text-align:left;font-size:30px;"><B>Team BMR</B></p></h3>
 
 
 
-
-# <center>**GreenThumbpsUp**</center>
-
-<center>**Welcome to Greenthumbsup**</center>
-
-### <center>Launch: [**Here**](https://greenthumbsup.herokuapp.com//)</center>
-
-### **How-It Works a user story:**
-**AAU, I want to see my username in the nav bar when I'm logged in.
-**AAU, I want to be able to make a profile with my first name, last name, and email address.**
-**AAU, if I see another user's plant that I like I want to be able to click a like button.
-**AAU, if I see another user's plant that I like I want to be able to click a like button.
-**AAU, if I see another user's plant that I like I want to be able to click a like button.
-**AAU, I want to be able to log my plant's fertilizer/s and the fertilizing schedule, so I have a record of it.
-**As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
-**As a Visitor, upon browsing to the application, I want to be able to sign up to access and use all the features of the app.
-**AAU, I want to be able to log in to add plants to my list.
-**AAU, I want to be able to log out when I'm done using the app.
-**As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.  
-**AAU, I want to be able to make changes to my plant details when I'm logged in so that I can record my plant's progress.
-**AAU, I want to be able to delete a plant I no longer have when I'm logged in.
-**AAU, I want to be able to upload photos of my plant when I'm logged in.
-**AAU, I want to be able to log my plant's watering schedule, so I can keep track of it.
-**AAU, I want to be the only one who can update my plants.
-**AAU, I want other logged in users to see all my plants and I want to be able to view other users' plants as well.
-**AAU, I want to be the only one who can delete my plants.
+![picture 1](images/1690acfcbace66e7ee9d52342462b86b15a86eb1f1642307161a6cdfb1a96973.png)  
 
 
- 
-### **Web App built with:**
-HTML
-CSS
-Python
-Django
-Materialize
-Heroku
-VS Code
-Postman
-GitHub
-Classmates
-Lectures
-Bootstrap
-Putty
 
 
-### **Future Enhancements:**
+<B>B</B>  `@krakensd`         https://github.com/krakensd
+
+<B>M</B>  `@m3lfrancisco`      https://github.com/m3lfrancisco
+
+<B>R</B>   `@roob19`           https://github.com/Roob19
+
+
+Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
+
+
+
+### **How We Grow a User Story:**
+
+1. AAU, I want to see my username in the nav bar when I'm logged in.
+2. AAU, I want to be able to make a profile with my first name, last name, and email address.
+3. AAU, if I see another user's plant that I like I want to be able to click a like button.
+4. AAU, if I see another user's plant that I like I want to be able to click a like button.
+5. AAU, if I see another user's plant that I like I want to be able to click a like button.
+6. AAU, I want to be able to log my plant's fertilizer/s and the fertilizing schedule, so I have a record of it.
+7. As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.
+8. As a Visitor, upon browsing to the application, I want to be able to sign up to access and use all the features of the app.
+9. AAU, I want to be able to log in to add plants to my list.
+10. AAU, I want to be able to log out when I'm done using the app.
+11. As a Visitor, upon browsing to the application, I want to see an About link on the nav bar that I could click and that would take me to an About page which tells me what the app is for, so I can decide if I want to sign up and use the app.
+12. AAU, I want to be able to make changes to my plant details when I'm logged in so that I can record my plant's progress.
+13. AAU, I want to be able to delete a plant I no longer have when I'm logged in.
+14. AAU, I want to be able to upload photos of my plant when I'm logged in.
+15. AAU, I want to be able to log my plant's watering schedule, so I can keep track of it.
+16. AAU, I want to be the only one who can update my plants.
+17. AAU, I want other logged in users to see all my plants and I want to be able to view other users' plants as well.
+18. AAU, I want to be the only one who can delete my plants.
+
+### **Greenthumbsup Grown with:**
+
+
+* Python|<i class="fa-brands fa-python"></i>
+* Django
+* Materialize
+* Bootstrap
+* Heroku
+* VS Code
+* Postgresql
+* SQLite
+* PG Admin
+* AWS
+* GitHub
+* GitHub Projects
+* Whimsical
+* HTML
+* CSS
+* Putty
+* Classmates
+* Instructors
+
+****Future Enhancements:****
+
 * Pretty it up.
 * Add and Consume 3rd party API's.
+* Add Goggle OAuth
 * Add Facebook OAuth
+* Add Link'ed In Auth
 * Make it mobile ready and lite.
-* Add more routes, controllers and views to consume more data to add more collections 
-* Data-Data-Data 
+* Add more routes, controllers and views to consume more data to add more collections
+* Data-Data-Data
 
-### **What did I learn:**
-* Value of having fresh eyes (classmates)
-* Not to sleep and code
-* Troubleshooting
-* Database connection strings
-* Google OAuth2
-* Bounce Nodemon more often
-* --tail logs
-* Better understanding of VS Code
-* Better understanding of VS Code Extensions (Azure)
+### **What did We learn:** 
+**Above All TEAMWORK !!!**
+
+* PostgreSQL
+  * PGADMIN
+  * psql 
+  * Data Modeling
+* Python
+   * Control Flow  
+   * Functions
+   * Containers
+   * Classes
+* Py-Pac-Poe
+* Django
+  * Models
+  * Class based Views
+  * Models - One -> Many
+  * Models - Many -> Many
+* More CRUD
+* Time Management
+* Always be Troubleshooting
+* Database connection Issues
+* Database Authentication 
+* -- tail, tail, tail logs
+* Better understanding of the power of VS Code & Extensions
 * Learn more tools (Postman, Studio 3T)
-* Time Management and the lack of
-* Mongoose
-* Express
 * Better understanding of GitHub's value
 * Don't be stubborn - Ask for HELP!!!
 * Don't bite off more than you can chew
 * Don't decice on an API and code around it - Atleast not yet
 * If it works roll with it
-* Go big down the road
+* Make it work First then Go Big
+
 ** Rest
 
 ### ****What** went Bad:**
-* Where to start so many things were bad
-* Adding 5 hour energies to my coffee
+
+* Dealing with env
 * Can't code in a bubble
 * Thinking too big
-* Have a design in mind first then code
-* Computer glitches
-* Starting from scratch 3 times 
 
 ### **Links:**
-* **Mymoviesapp Deployed at :** **https://quiet-springs-85754.herokuapp.com/movies**
-* **Wireframe:** **https://github.com/krakensd/MymovieappA**
-* ****Heroku Applog tails**:** **git@github.com:krakensd/myMovieapp.git**
-* **Readme:** **git@github.com:krakensd/myMovieapp.git****
-* ***Git Hub***:**https://github.com/krakensd/Mymovieapp**
 
+Greenthumbsup Deployed at :**  **https://greenthumbsup.herokuapp.com**
+Wireframe:**  **https://whimsical.com/bmrs-greenthumbsup-yGVgyBMuuiL7R3QsuQnjs**
+Readme:**  **https://github.com/m3lfrancisco/greenthumbsup****
+Git Hub***:      **https://github.com/m3lfrancisco/greenthumbsup**
+GitHub Project-3:   **https://github.com/m3lfrancisco/greenthumbsup/projects**
+[ERD] **(https://lucid.app/lucidchart/88e4fc2f-7bd4-45dc-9754-6f9ecc78b022/edit?invitationId=inv_dbe4d151-4bc3-4b70-ac24-9c4416f829d7&referringApp=slack&page=0_0#)**
+
+|||||https://greenthumbsup.herokuapp.com|
+
+
+
+|  |  |
 
 ### **Thanks to:**
-* Everyone who gave me help and encouragement.
-Inline `code` has `back-ticks around` it.
+
+To the Team and Entire SEIR28RC class
+
+</body>
+</html>
