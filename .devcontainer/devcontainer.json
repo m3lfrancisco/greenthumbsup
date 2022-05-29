@@ -1,0 +1,63 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.234.0/containers/markdown
+{
+	"name": "Markdown Editing",
+	"dockerFile": "Dockerfile",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"yzhang.markdown-all-in-one",
+		"streetsidesoftware.code-spell-checker",
+		"DavidAnson.vscode-markdownlint",
+		"shd101wyy.markdown-preview-enhanced",
+		"bierner.github-markdown-preview",
+		"starkwang.markdown",
+		"dalirnet.rtl-markdown",
+		"fabiospampinato.vscode-markdown-todo",
+		"Tarocch1.markdown-enhanced",
+		"mikkel-ol.er-syntax-highlighting",
+		"PKief.markdown-checkbox",
+		"bierner.markdown-checkbox",
+		"manuth.markdown-converter",
+		"bierner.markdown-emoji",
+		"s2junn.markdown-essentials",
+		"zhaouv.vscode-markdown-everywhere",
+		"ndagistanley.markdown-ext-pack",
+		"doggy8088.markdown-extension-pack",
+		"jebbs.markdown-extended",
+		"bierner.markdown-footnotes",
+		"zhyong10.markdown-html",
+		"hancel.markdown-image",
+		"bierner.markdown-image-size",
+		"tchayen.markdown-links",
+		"koehlma.markdown-math",
+		"jasonroger.markdown-preview-enhanced-fork",
+		"yzane.markdown-pdf",
+		"bierner.markdown-preview-github-styles",
+		"bierner.markdown-mermaid",
+		"mdickin.markdown-shortcuts",
+		"robole.markdown-shortcuts",
+		"robole.markdown-snippets",
+		"TakumiI.markdowntable",
+		"fcrespo82.markdown-table-formatter",
+		"darkriszty.markdown-table-prettify",
+		"ms-vscode.Theme-MarkdownKit",
+		"yanz.markdown-authoring",
+		"goessner.mdmath",
+		"thomanq.math-snippets",
+		"eliostruyf.vscode-msgraph-essentials",
+		"Allisat-Software.markdown-toolbox"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
