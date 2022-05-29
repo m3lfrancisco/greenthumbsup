@@ -9,10 +9,23 @@
 
 <form action="" method="POST">
     {% csrf_token %}
-        <table>
-            {{ form.as_table }}
-        </table>
-    <input type="submit" value="Submit!" class="btn">
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button class="btn-floating waves-effect waves-light" type="submit">
+        <i class="material-icons right">add</i>
+    </button> 
+    <span>Submit</span>
 </form>
+
+<script>
+    const dateEl = document.getElementById('id_adoption_date');
+    M.Datepicker.init(dateEl, {
+        format: 'yyyy-mm-dd',
+        defaultDate: new Date(),
+        setDefaultDate: true,
+        autoClose: true
+    });
+</script>
 
 {% endblock %}
