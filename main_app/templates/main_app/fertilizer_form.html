@@ -2,9 +2,9 @@
 {% block content %}
 
 {% if object %}
-    <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
+    <h1 class="center-align" style="color: #6d4c41">Edit <span style="color: #0288d1">{{object.name}}</span></h1>
 {% else %}
-    <h1>Add a Fertilizer</h1>
+    <h1 class="center-align" style="color: #6d4c41">Add a Fertilizer</h1>
 {% endif %}
 
 <form action="" method="POST">
@@ -12,17 +12,10 @@
     <table>
         {{ form.as_table }}
     </table>
-    {% comment %} <div class="row">
-        <div class="input-field col s6">
-            <input placeholder="Fertilizer Name" id="fertilizer_name" type="text" class="validate">
-            <input hidden placeholder="Fertilize Date" id="fertilize_date" type="text" class="validate">
-            <input hidden placeholder="Fertilizer Frequency" id="fertilizer_frequency" type="text" class="validate">
-        </div> {% endcomment %}
-        <input type="submit" value="Submit!" class="btn">
-        {% comment %} <button class="btn waves-effect waves-light" type="submit">Submit
-            <i class="material-icons right">send</i>
-        </button> {% endcomment %}
-    {% comment %} </div> {% endcomment %}
+    <button class="btn-floating waves-effect waves-light" type="submit">
+        <i class="material-icons right">add</i>
+    </button> 
+    <span>Submit</span>
 </form>
 
 {% endblock %}

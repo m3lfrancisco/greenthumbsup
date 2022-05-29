@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Fertilizer List</h1>
-
-{% for fertilizer in fertilizer_list %}
-    <a href="{% url 'fertilizers_detail' fertilizer.id %}">
-        <div class="card">
-            <div class="card-content">
-                <span class="card-title">{{ fertilizer.name }}</span>
-                {% comment %} <p>Date: {{ fertilizer.fertilize_date }}</p>
-                <p>Frequency: {{ fertilizer.frequency }}</p> {% endcomment %}
-            </div>
+<h1 class="center-align" style="color: #6d4c41">Fertilizer List</h1>
+<div class="row">
+    {% for fertilizer in fertilizer_list %}
+        <div class="col s6 col-offset-3">
+            <a href="{% url 'fertilizers_detail' fertilizer.id %}">
+                <div class="card hoverable">
+                    <div class="card-content" style="background-color: #FFFDE7">
+                        <span class="card-title">{{ fertilizer.name }}</span>
+                    </div>
+                </div>
+            </a>
         </div>
-    </a>
-{% endfor %}
+    {% endfor %}
+</div>
 
 {% endblock %}

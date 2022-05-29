@@ -18,7 +18,8 @@ def home(request):
     home view
     http://localhost:8000/
     """
-    return render(request, 'home.html')
+    photos = Photo.objects.all()
+    return render(request, 'home.html', {'photos': photos})
 
 def about(request):
     """
@@ -32,7 +33,6 @@ def plants_index(request):
     plants index page
     http://localhost:8000/plants/
     """
-    logging.info('calling plants_index')
     plants = Plant.objects.all()
     return render(request, 'plants/index.html', {'plants': plants})
 
@@ -42,7 +42,6 @@ def my_plants(request):
     user's plants index page
     http://localhost:8000/plants/my_plants/
     """
-    logging.info('calling my_plants (user plants)')
     plants = Plant.objects.filter(user=request.user)
     return render(request, 'plants/my_plants.html', {'plants': plants})
 
@@ -52,13 +51,11 @@ def plants_detail(request, plant_id):
     plant detail page
     http://localhost:8000/dogs/1/
     """
-    logging.info('calling plants_detail')
     plant = Plant.objects.get(id=plant_id)
     fertilizers_plant_doesnt_have = Fertilizer.objects.exclude(id__in = plant.fertilizers.all().values_list('id'))
     return render(request, 'plants/detail.html', {
         'plant': plant, 
         'watering_form': WateringForm,
-        # 'fertilizing_form': FertAndServiceForm,
         'fertilizers': fertilizers_plant_doesnt_have
         })
 
@@ -103,23 +100,6 @@ def add_watering(request, plant_id):
         new_watering.save()
     return redirect('detail', plant_id=plant_id)
 
-# def add_fertilizing(request, plant_id):
-#     form = FertilizingForm(request.POST)
-#     if form.is_valid():
-#         new_fertilizer = form.save(commit=False)
-#         new_fertilizer.plant_id = plant_id
-#         new_fertilizer.save()
-#     return redirect('detail', plant_id=plant_id)
-
-# def add_fertilizing(request, plant_id):
-#     form = FertAndServiceForm(request.POST)
-#     if form.is_valid():
-#         new_fertilizer = form.save(commit=False)
-#         new_fertilizer.plant_id = plant_id
-#         new_fertilizer.save()
-#         logging.info('calling add_fertilizing form.is_valid')
-#     return redirect('detail', plant_id=plant_id)
-
 @login_required
 def add_photo(request, plant_id):
     photo_file = request.FILES.get('photo-file', None)
@@ -162,33 +142,6 @@ def signup(request):
     form = UserCreationForm()
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
-
-# @login_required
-# def profile(request):
-#     """
-#     user's profile page
-#     http://localhost:8000/profile/
-#     """
-#     logging.info('calling profile')
-#     return render(request, 'registration/profile.html')
-
-# class ProfileCreate(LoginRequiredMixin, CreateView):
-#     """
-#     This class will create a profile object
-#     http://localhost:8000/profile/create/
-#     """
-#     model = Profile
-#     fields = '__all__'
-#     success_url = '/profile/'
-
-# class ProfileUpdate(LoginRequiredMixin, UpdateView):
-#     """
-#     This class will update a profile object
-#     http://localhost:8000/profile/1/
-#     """
-#     model = Profile
-#     fields = '__all__'
-#     success_url = '/profile/'
 
 class FertilizerList(LoginRequiredMixin, ListView):
     """

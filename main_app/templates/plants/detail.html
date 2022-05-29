@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Plant Details</h1>
+<h1 class="center-align" style="color: #6d4c41">Plant Details</h1>
 
 <div class="row">
     <div class="col s6">
         <div class="card">
-            <div class="card-content">
-                <span class="card-title">{{ plant.name }}</span>
+            <div class="card-content" style="background-color: #FFFDE7">
+                <span class="card-title" style="color: #0288d1">{{ plant.name }}</span>
                 <p>Plant Type: {{ plant.plant_type }}</p>
                 <p>Color: {{ plant.color }}</p>
                 <p>Sunlight: {{ plant.sunlight }}</p>
@@ -16,8 +16,10 @@
             </div>
             {% if user == plant.user %}
                 <div class="card-action">
-                    <a href="{% url 'plants_update' plant.id %}">Edit</a>
-                    <a href="{% url 'plants_delete' plant.id %}" class="red-text">Delete</a>
+                    <a class="btn-floating waves-effect waves-light orange" href="{% url 'plants_update' plant.id %}"><i class="material-icons">edit</i></a>
+                    <span>EDIT</span>
+                    <a class="btn-floating waves-effect waves-light red" href="{% url 'plants_delete' plant.id %}" class="red-text"><i class="material-icons">delete</i></a>
+                    <span>DELETE</span>
                 </div>
             {% else %}
                 <div class="card-action">
@@ -31,18 +33,22 @@
             <div class="card-panel teal-text center-align">No Photos Uploaded</div>
         {% endfor %}
 
-        {% if user == plant.user %}
-            <form action="{% url 'add_photo' plant.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
-                {% csrf_token %}
-                <input type="file" name="photo-file">
-                <br><br>
-                <input type="submit" class="btn" value="Upload Photo">
-            </form>
-        {% else %}
-        
-        {% endif %}
-
+        <div class="card">
+            <div class="card-content" style="background-color: #FFFDE7">
+                {% if user == plant.user %}
+                    <form action="{% url 'add_photo' plant.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+                        {% csrf_token %}
+                        <input type="file" name="photo-file">
+                        <br><br>
+                        <a  class="waves-effect waves-light btn"><i class="material-icons right">file_upload</i>UPLOAD</a>
+                    </form>
+                {% else %}
+                
+                {% endif %}
+            </div>
+        </div>
     </div>
+
     <div class="col s6">
         {% if user == plant.user %}
             <form method="post" action="{% url 'add_watering' plant.id %}">
@@ -82,33 +88,15 @@
                             <span class="card-title">
                                 <span>{{ fertilizer.name }}</span> 
                             </span>
-                            {% comment %} <form method="post" action="{% url 'add_fertilizing' plant.id %}">
-                                {% csrf_token %}
-                                {{ fertilizing_form.as_p }}
-                                <input type="submit" class="btn" value="Fertilize">
-                            </form> {% endcomment %}
                         </div>
                         <div class="card-action">
                             <form action="{% url 'unassoc_fertilizer' plant.id fertilizer.id %}" method="post">
                                 {% csrf_token %}
-                                <button type="submit" class="btn waves-effect waves-light">Remove</button>
+                                <button type="submit" class="btn btn-success">Remove</button>
                             </form>
                         </div>
                     </div>
                 {% endfor %}
-                {% comment %} <table class="striped">
-                    <thead>
-                        <tr><th>Date</th><th>Frequency</th></tr>
-                    </thead>
-                    <tbody>
-                        {% for fertservice in plant.fertservice_set.all %}
-                            <tr>
-                                <td>{{fertservice.fertilize_date}}</td>
-                                <td>{{fertservice.frequency}}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table> {% endcomment %}
             {% else %}
                 <h5 class="cyan-text">No Fertilizers :(</h5>
             {% endif %}
@@ -124,7 +112,7 @@
             {% if fertilizers.count %}
                 {% for fertilizer in fertilizers.all %}
                     <div class="card">
-                        <div class="card-content">
+                        <div class="card-content" style="background-color: #FFFDE7">
                             <span class="card-title">
                                 <span>{{ fertilizer.name }}</span>
                             </span>
@@ -132,7 +120,7 @@
                         <div class="card-action">
                             <form action="{% url 'assoc_fertilizer' plant.id fertilizer.id %}" method="post">
                                 {% csrf_token %}
-                                <button type="submit" class="btn waves-effect waves-light">Add</button>
+                                <button type="submit" class="btn btn-success">Add</button>
                             </form>
                         </div>
                     </div>

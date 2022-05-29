@@ -2,17 +2,20 @@
 {% block content %}
 
 {% if object %}
-    <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
+    <h1 class="center-align" style="color: #6d4c41">Edit <span style="color: #0288d1">{{object.name}}</span></h1>
 {% else %}
-    <h1>Add a Plant</h1>
+    <h1 class="center-align" style="color: #6d4c41">Add a Plant</h1>
 {% endif %}
 
 <form action="" method="POST">
     {% csrf_token %}
-        <table>
-            {{ form.as_table }}
-        </table>
-    <input type="submit" value="Submit!" class="btn">
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button class="btn-floating waves-effect waves-light" type="submit">
+        <i class="material-icons right">add</i>
+    </button> 
+    <span>Submit</span>
 </form>
 
 <script>

@@ -1,30 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>My Plants</h1>
+<h1 class="center-align" style="color: #6d4c41">My Plants</h1>
 
-{% if user %}
-    {% for plant in plants %}
-        <a href="{% url 'detail' plant.id %}">
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title">{{ plant.name }}</span>
-                    {% for photo in plant.photo_set.all %}
-                        <img class="responsive-img card-panel" src="{{photo.url}}">
-                    {% empty %}
-                        <div class="card-panel teal-text center-align">No Photos Uploaded</div>
-                    {% endfor %}
-                    <p>Plant Type: {{ plant.plant_type }}</p>
-                    <p>Color: {{ plant.color }}</p>
-                    <p>Sunlight: {{ plant.sunlight }}</p>
-                    <p>Adoption Date: {{ plant.adoption_date }}</p>
-                    <p>Notes: {{ plant.notes }}</p>
+<div class="container">
+    <div class="row">
+        {% if user %}
+            {% for plant in plants %}
+                <div class="col s12 m6 l3">
+                    <a href="{% url 'detail' plant.id %}">
+                        <div class="card hoverable">
+                            <div class="card-content" style="background-color: #FFFDE7">
+                                <span class="card-title">{{ plant.name }}</span>
+                                {% for photo in plant.photo_set.all %}
+                                    <img class="responsive-img card-panel" src="{{photo.url}}" style="white-space: nowrap;">
+                                {% empty %}
+                                    <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+                                {% endfor %}
+                                <p>Plant Type: {{ plant.plant_type }}</p>
+                                <p>Color: {{ plant.color }}</p>
+                                <p>Sunlight: {{ plant.sunlight }}</p>
+                                <p>Adoption Date: {{ plant.adoption_date }}</p>
+                                <p>Notes: {{ plant.notes }}</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-        </a>
-    {% endfor %}
-{% else %}
-    <h3>No PLants Yet! Please Add A Plant</h3>
-{% endif %}
+            {% endfor %}
+        {% else %}
+            <h3>No PLants Yet! Please Add A Plant</h3>
+        {% endif %}
+    </div>
+</div>
 
 {% endblock %}

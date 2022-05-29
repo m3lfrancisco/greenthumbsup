@@ -11,19 +11,13 @@
 
 ![picture 1](images/1690acfcbace66e7ee9d52342462b86b15a86eb1f1642307161a6cdfb1a96973.png)  
 
-
-
-
 <B>B</B>  `@krakensd`         https://github.com/krakensd
 
 <B>M</B>  `@m3lfrancisco`      https://github.com/m3lfrancisco
 
 <B>R</B>   `@roob19`           https://github.com/Roob19
 
-
 Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
-
-
 
 ### **How We Grow a User Story:**
 
@@ -52,7 +46,6 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 * Python|<i class="fa-brands fa-python"></i>
 * Django
 * Materialize
-* Bootstrap
 * Heroku
 * VS Code
 * Postgresql
@@ -76,8 +69,6 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 * Add Facebook OAuth
 * Add Link'ed In Auth
 * Make it mobile ready and lite.
-* Add more routes, controllers and views to consume more data to add more collections
-* Data-Data-Data
 
 ### **What did We learn:** 
 **Above All TEAMWORK !!!**
@@ -108,7 +99,6 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 * Better understanding of GitHub's value
 * Don't be stubborn - Ask for HELP!!!
 * Don't bite off more than you can chew
-* Don't decice on an API and code around it - Atleast not yet
 * If it works roll with it
 * Make it work First then Go Big
 
