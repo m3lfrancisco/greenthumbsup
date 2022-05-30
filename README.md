@@ -42,9 +42,6 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 
 ### **Green Thumbs Up Grown With:**
 
-|  |  |
-| :---: | :---: |
-|<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
 * Python
 * Django
 * Materialize
