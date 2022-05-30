@@ -26,7 +26,7 @@
                     <i class="material-icons">menu</i>
                 </a>
                 <a class="brand-logo hide-on-large-only" style="white-space: nowrap;" href="{% url 'home' %}">
-                    &nbsp;<i class="material-icons">thumb_up</i>&nbsp;<span style="font-family: 'Italiana', serif;">Green Thumbs Up</span>&nbsp;
+                    &nbsp;<i class="material-icons">thumb_up</i>&nbsp;<span style="font-family: 'Italiana', serif;">Green Thumbs Up</span>&emsp;&emsp;
                 </a>
                 <ul class="hide-on-med-and-down">
                     <li><a href="{% url 'home' %}">&emsp;&emsp; Home</a></li>
@@ -38,8 +38,8 @@
                         <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
                         <li><a href="{% url 'fertilizers_index' %}">All Fertilizers</a></li>
                         <div class="right">
-                            <li><a href="{% url 'logout' %}">Log Out</a></li>
                             <li><h5 style="color: #18FFFF">&nbsp;&nbsp; Hi {{ user }}! &emsp;</h5></li>
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
                             <li><i class="material-icons">account_circle</i></li>&emsp;&emsp;&emsp;&emsp;
                         </div>
                     {% else %}

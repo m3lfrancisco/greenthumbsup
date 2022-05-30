@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<center>
+    <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_o6hQ8m.json"  
+        background="transparent"  
+        speed="1"  
+        style="width: 300px; height: 300px; margin-top: 5vmin;"  
+        loop autoplay>
+    </lottie-player>
+</center>
+
 <h1 class="center-align" style="color: #6d4c41; font-family: 'Italiana', serif;">Login</h1>
 
 <form method="post" action="{% url 'login' %}">
