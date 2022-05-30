@@ -27,6 +27,14 @@ nav ul li:hover {
     background-color: #18FFFF;
 }
 
+h1 h2 h3 h4 h5 h6 th {
+    font-family: 'Italiana', serif;
+}
+
+p tr td {
+    font-family: 'Roboto', sans-serif;
+}
+
 @media only screen and (max-width: 992px) {
     header, main, footer {
         padding-left: 0;

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="center-align" style="color: #6d4c41">My Plants</h1>
+<h1 class="center-align" style="color: #6d4c41; font-family: 'Italiana', serif;">My Plants</h1>
 
 <div class="container">
     <div class="row">
@@ -11,24 +11,24 @@
                     <a href="{% url 'detail' plant.id %}">
                         <div class="card hoverable">
                             <div class="card-content" style="background-color: #FFFDE7">
-                                <span class="card-title">{{ plant.name }}</span>
+                                <span class="card-title" style="font-family: 'Italiana', serif;">{{ plant.name }}</span>
                                 {% for photo in plant.photo_set.all %}
                                     <img class="responsive-img card-panel" src="{{photo.url}}" style="white-space: nowrap;">
                                 {% empty %}
-                                    <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+                                    <div class="card-panel teal-text center-align" style="font-family: 'Italiana', serif;">No Photos Uploaded</div>
                                 {% endfor %}
-                                <p>Plant Type: {{ plant.plant_type }}</p>
-                                <p>Color: {{ plant.color }}</p>
-                                <p>Sunlight: {{ plant.sunlight }}</p>
-                                <p>Adoption Date: {{ plant.adoption_date }}</p>
-                                <p>Notes: {{ plant.notes }}</p>
+                                <p style="font-family: 'Roboto', sans-serif;">Plant Type: {{ plant.plant_type }}</p>
+                                <p style="font-family: 'Roboto', sans-serif;">Color: {{ plant.color }}</p>
+                                <p style="font-family: 'Roboto', sans-serif;">Sunlight: {{ plant.sunlight }}</p>
+                                <p style="font-family: 'Roboto', sans-serif;">Adoption Date: {{ plant.adoption_date }}</p>
+                                <p style="font-family: 'Roboto', sans-serif;">Notes: {{ plant.notes }}</p>
                             </div>
                         </div>
                     </a>
                 </div>
             {% endfor %}
         {% else %}
-            <h3>No PLants Yet! Please Add A Plant</h3>
+            <h3 style="font-family: 'Italiana', serif;">No PLants Yet! Please Add A Plant</h3>
         {% endif %}
     </div>
 </div>
