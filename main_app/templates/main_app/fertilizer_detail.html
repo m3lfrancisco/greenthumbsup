@@ -2,31 +2,30 @@
 {% block content %}
 
 <section class="container">
-<h1 class="center-align" style="color: #6d4c41">Fertilizer Details</h1>
-<div class="row">
-    <div class="col s12 l6">
-    {% comment %} <div class="col s6 col-offset-3"> {% endcomment %}
-        <div class="card hoverable">
-            <div class="card-content" style="background-color: #FFFDE7">
-                <span class="card-title" style="color: #0288d1">{{ fertilizer.name }}</span>
-            </div>
-            <div class="card-action">
-                <a class="btn-floating waves-effect waves-light orange" href="{% url 'fertilizers_update' fertilizer.id %}"><i class="material-icons">edit</i></a>
-                <span>Edit</span>
-                <a class="btn-floating waves-effect waves-light red" href="{% url 'fertilizers_delete' fertilizer.id %}"><i class="material-icons">delete</i></a>
-                <span>Delete</span>
+    <h1 class="center-align" style="color: #6d4c41">Fertilizer Details</h1>
+    <div class="row">
+        <div class="col s12 l6">
+            <div class="card hoverable">
+                <div class="card-content" style="background-color: #FFFDE7">
+                    <span class="card-title" style="color: #0288d1">{{ fertilizer.name }}</span>
+                </div>
+                <div class="card-action">
+                    <a class="btn-floating waves-effect waves-light orange" href="{% url 'fertilizers_update' fertilizer.id %}"><i class="material-icons">edit</i></a>
+                    <span>Edit</span>
+                    <a class="btn-floating waves-effect waves-light red" href="{% url 'fertilizers_delete' fertilizer.id %}"><i class="material-icons">delete</i></a>
+                    <span>Delete</span>
+                </div>
             </div>
         </div>
+        <div class="col s12 l4">
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1plcwvk5.json"   
+                background="transparent"  
+                speed="1"  
+                style="width: 300px; height: 300px;"  
+                loop autoplay>
+            </lottie-player> 
+        </div>
     </div>
-    <div class="col s12 l4">
-        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1plcwvk5.json"   
-            background="transparent"  
-            speed="1"  
-            style="width: 300px; height: 300px;"  
-            loop autoplay>
-        </lottie-player> 
-    </div>
-</div>
 </section>
 
 {% endblock %}

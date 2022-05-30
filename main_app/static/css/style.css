@@ -31,8 +31,8 @@ p tr td {
     font-family: 'Roboto', sans-serif;
 }
 
-/* @media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
     header, main, footer {
         padding-left: 0;
     }
-} */
+}
