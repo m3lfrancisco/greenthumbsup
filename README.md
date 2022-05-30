@@ -14,20 +14,15 @@
 
 Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 
-ERD
 <img src="https://imgur.com/GZCllNi.png" />
 
-Home Page
-<img src="https://imgur.com/EE7UjWx.png" />
+![Green Thumbs Up Home Page](https://imgur.com/EE7UjWx.png)
 
-All Community Plants Page
-<img src="https://imgur.com/BbL1LRd.png" />
+![All Community Plants Page](https://imgur.com/BbL1LRd.png)
 
-My Plants Page
-<img src="https://imgur.com/5emb1En.png" />
+![My Plants Page](https://imgur.com/5emb1En.png)
 
-Plant Details Page
-<img src="https://imgur.com/JgiTJWK.png" />
+![Plant Details Page](https://imgur.com/JgiTJWK.png)
 
 ### **How We Grow a User Story:**
 
@@ -67,6 +62,8 @@ Plant Details Page
 | <img src="https://www.finsmes.com/wp-content/uploads/2021/11/Whimsical.jpg" height="75" width="75" />| Whimsical |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="75" width="75" /> | HTML |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="75" width="75" /> | CSS |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="75" width="75" /> | JavaScript |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" height="75" width="75" /> | jQuery |
 | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/LottieFiles_logo.svg/799px-LottieFiles_logo.svg.png?20200720040237" height="75" />| Lottie |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" height="75" width="75" /> | Bash |
 | <img src="https://crpd.com/wp-content/uploads/Rancho-Cordova-Logo-Color-Large.png" height="75" /> | Classmates |
