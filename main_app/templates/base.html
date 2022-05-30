@@ -31,7 +31,7 @@
                     {% comment %} <i class="fa-solid fa-leaf"></i>&nbsp;&nbsp;Green Thumbs Up {% endcomment %}
                 </a>
                 <ul class="hide-on-med-and-down">
-                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}">&emsp;&emsp; Home</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'index' %}">Community Plants</a></li>
                     {% if user.is_authenticated %}
@@ -39,9 +39,9 @@
                         <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
                         <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
                         <li><a href="{% url 'fertilizers_index' %}">All Fertilizers</a></li>
-                        <div class="right" style="margin-right: ">
+                        <div class="right">
                             <li><a href="{% url 'logout' %}">Log Out</a></li>
-                            <li><h5 style="color: #18FFFF">&nbsp; &nbsp; Hi {{ user }}!</h5></li>
+                            <li><h5 style="color: #18FFFF">&nbsp;&nbsp; Hi {{ user }}! &emsp;&emsp;</h5></li>
                         </div>
                     {% else %}
                         <li><a href="{% url 'signup' %}">Sign Up</a></li>
