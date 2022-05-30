@@ -14,10 +14,6 @@ footer.page-footer {
     text-align: right;
 }
 
-/* header, footer {
-    padding-left: 300px;
-} */
-
 nav ul li:hover {
     background-color: #18FFFF;
     text-shadow: 1px 1px 2px #006064;
