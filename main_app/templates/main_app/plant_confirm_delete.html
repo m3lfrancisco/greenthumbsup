@@ -3,14 +3,24 @@
 
 <h1 class="center-align" style="color: #6d4c41">Delete Plant</h1>
 
-<h4>Are you sure you want to remove this plant? <span style="color: #0288d1">{{ object.name }}</span>?</h4>
+<center>
+  <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_kmpxpslw.json"  
+    background="transparent"  
+    speed="1"  
+    style="width: 300px; height: 300px;"  
+    loop controls autoplay>
+  </lottie-player>
 
-<form action="" method="POST">
-  {% csrf_token %}
-  <button type="submit" class="btn-floating waves-effect waves-light red"><i class="material-icons">delete</i></button>
-    <span>Delete</span>
-  <a class="btn-floating waves-effect waves-light" href="{% url 'detail' plant.id %}"><i class="material-icons">cancel</i></a>
-    <span>Cancel</span>
-</form>
+  <h4>Are you sure you want to remove this plant? <span style="color: #0288d1">{{ object.name }}</span>?</h4>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn-floating waves-effect waves-light red"><i class="material-icons">delete</i></button>
+      <span>Delete</span>
+    <a class="btn-floating waves-effect waves-light" href="{% url 'detail' plant.id %}"><i class="material-icons">cancel</i></a>
+      <span>Cancel</span>
+  </form>
+
+</center>
 
 {% endblock %}
