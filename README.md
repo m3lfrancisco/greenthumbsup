@@ -1,4 +1,4 @@
-<h1><p style="color:green;text-align:center;font-size:55px;"><B>WELCOME TO GREENTHUMBSUP</B></p></h1>
+<h1><p style="color:green;text-align:center;font-size:55px;"><B>WELCOME TO GREEN THUMBS UP</B></p></h1>
 
 
 <h2><p style="color:green;text-align:center;font-size:40px;"><B>Where Users Come To GROW</B></p></h2>
@@ -40,10 +40,12 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 17. AAU, I want other logged in users to see all my plants and I want to be able to view other users' plants as well.
 18. AAU, I want to be the only one who can delete my plants.
 
-### **Greenthumbsup Grown with:**
+### **Green Thumbs Up Grown With:**
 
-
-* Python|<i class="fa-brands fa-python"></i>
+|  |  |
+| --- | :--- |
+|
+* Python
 * Django
 * Materialize
 * Heroku
