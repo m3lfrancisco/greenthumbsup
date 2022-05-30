@@ -43,8 +43,8 @@
                             <li><i class="material-icons">account_circle</i></li>&emsp;&emsp;&emsp;&emsp;
                         </div>
                     {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'login' %}">Log In</a></li>
+                        <li style="position: fixed; right: 75px;"><a href="{% url 'signup' %}">Sign Up</a></li>
+                        <li style="position: fixed; right: 5px;"><a href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
