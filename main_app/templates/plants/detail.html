@@ -1,46 +1,46 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="center-align" style="color: #6d4c41">Plant Details</h1>
+<h1 class="center-align" style="color: #6d4c41; font-family: 'Italiana', serif;">Plant Details</h1>
 
 <div class="row">
     <div class="col s6">
         <div class="card">
             <div class="card-content" style="background-color: #FFFDE7">
-                <span class="card-title" style="color: #0288d1">{{ plant.name }}</span>
-                <p>Plant Type: {{ plant.plant_type }}</p>
-                <p>Color: {{ plant.color }}</p>
-                <p>Sunlight: {{ plant.sunlight }}</p>
-                <p>Adoption Date: {{ plant.adoption_date }}</p>
-                <p>Notes: {{ plant.notes }}</p>
+                <span class="card-title" style="color: #0288d1; font-family: 'Italiana', serif;">{{ plant.name }}</span>
+                <p style="font-family: 'Roboto', sans-serif;">Plant Type: {{ plant.plant_type }}</p>
+                <p style="font-family: 'Roboto', sans-serif;">Color: {{ plant.color }}</p>
+                <p style="font-family: 'Roboto', sans-serif;">Sunlight: {{ plant.sunlight }}</p>
+                <p style="font-family: 'Roboto', sans-serif;">Adoption Date: {{ plant.adoption_date }}</p>
+                <p style="font-family: 'Roboto', sans-serif;">Notes: {{ plant.notes }}</p>
             </div>
             {% if user == plant.user %}
                 <div class="card-action">
                     <a class="btn-floating waves-effect waves-light orange" href="{% url 'plants_update' plant.id %}"><i class="material-icons">edit</i></a>
-                    <span>EDIT</span>
+                    <span style="font-family: 'Italiana', serif;">EDIT</span>
                     <a class="btn-floating waves-effect waves-light red" href="{% url 'plants_delete' plant.id %}" class="red-text"><i class="material-icons">delete</i></a>
-                    <span>DELETE</span>
+                    <span style="font-family: 'Italiana', serif;">DELETE</span>
                 </div>
             {% else %}
                 <div class="card-action">
-                    <p>View Only</p>
+                    <p style="font-family: 'Roboto', sans-serif;">View Only</p>
                 </div>
             {% endif %}
         </div>
         {% for photo in plant.photo_set.all %}
             <img class="responsive-img card-panel" src="{{photo.url}}" style="white-space: nowrap;">
         {% empty %}
-            <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+            <div class="card-panel teal-text center-align" style="font-family: 'Italiana', serif;">No Photos Uploaded</div>
         {% endfor %}
 
         <div class="card">
             <div class="card-content" style="background-color: #FFFDE7">
                 {% if user == plant.user %}
-                    <form action="{% url 'add_photo' plant.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+                    <form action="{% url 'add_photo' plant.id %}" enctype="multipart/form-data" method="POST" class="card-panel" style="font-family: 'Italiana', serif;">
                         {% csrf_token %}
                         <input type="file" name="photo-file">
                         <br><br>
-                        <a  class="waves-effect waves-light btn"><i class="material-icons right">file_upload</i>UPLOAD</a>
+                        <a  class="waves-effect waves-light btn" style="font-family: 'Italiana', serif;"><i class="material-icons right">file_upload</i>UPLOAD</a>
                     </form>
                 {% else %}
                 
@@ -51,11 +51,11 @@
 
     <div class="col s6">
         {% if user == plant.user %}
-            <form method="post" action="{% url 'add_watering' plant.id %}">
+            <form method="post" action="{% url 'add_watering' plant.id %}" style="font-family: 'Italiana', serif;">
                 {% csrf_token %}
                 {{ watering_form.as_p }}
                 <button type="submit" class="btn-floating waves-effect waves-light light-blue darken-2"><i class="material-icons right">water_drop</i></button>
-                <span>WATER</span>
+                <span style="font-family: 'Italiana', serif;">WATER</span>
             </form>
         {% else %}
         
@@ -63,14 +63,18 @@
             <br>
             <table class="responsive-table">
                 <thead>
-                    <tr><th>Date</th><th>Time</th><th>Frequency</th></tr>
+                    <tr>
+                        <th style="font-family: 'Italiana', serif;">Date</th>
+                        <th style="font-family: 'Italiana', serif;">Time</th>
+                        <th style="font-family: 'Italiana', serif;">Frequency</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {% for watering in plant.watering_set.all %}
                         <tr>
-                            <td>{{watering.date}}</td>
-                            <td>{{watering.get_time_display}}</td>
-                            <td>{{watering.frequency}}</td>
+                            <td style="font-family: 'Roboto', sans-serif;">{{watering.date}}</td>
+                            <td style="font-family: 'Roboto', sans-serif;">{{watering.get_time_display}}</td>
+                            <td style="font-family: 'Roboto', sans-serif;">{{watering.frequency}}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -81,26 +85,26 @@
 <div class="row">
     <div class="col s6">
         {% if user == plant.user %}
-            <h3 class="purple-text">{{ plant.name }}'s Fertilizers</h3>
+            <h3 class="purple-text" style="font-family: 'Italiana', serif;">{{ plant.name }}'s Fertilizers</h3>
             {% if plant.fertilizers.count %}
                 {% for fertilizer in plant.fertilizers.all %}
                     <div class="card">
                         <div class="card-content" style="background-color: #FFFDE7">
                             <span class="card-title">
-                                <span>{{ fertilizer.name }}</span> 
+                                <span style="font-family: 'Italiana', serif;">{{ fertilizer.name }}</span> 
                             </span>
                         </div>
                         <div class="card-action">
                             <form action="{% url 'unassoc_fertilizer' plant.id fertilizer.id %}" method="post">
                                 {% csrf_token %}
                                 <button type="submit" class="btn-floating waves-effect waves-light red"><i class="material-icons right">remove_circle_outline</i></button>
-                                <span>REMOVE</span>
+                                <span style="font-family: 'Italiana', serif;">REMOVE</span>
                             </form>
                         </div>
                     </div>
                 {% endfor %}
             {% else %}
-                <h5 class="cyan-text">No Fertilizers :(</h5>
+                <h5 class="cyan-text" style="font-family: 'Italiana', serif;">No Fertilizers :( </h5>
             {% endif %}
         {% else %}
     
@@ -110,25 +114,25 @@
     <!-- Available fertilizers will come after this line -->
     <div class="col s6">
         {% if user == plant.user %}
-            <h3 class="deep-purple-text">Available Fertilizers</h3>
+            <h3 class="deep-purple-text" style="font-family: 'Italiana', serif;">Available Fertilizers</h3>
             {% if fertilizers.count %}
                 {% for fertilizer in fertilizers.all %}
                     <div class="card">
                         <div class="card-content" style="background-color: #FFFDE7">
                             <span class="card-title">
-                                <span>{{ fertilizer.name }}</span>
+                                <span style="font-family: 'Italiana', serif;">{{ fertilizer.name }}</span>
                             </span>
                         </div>
                         <div class="card-action">
                             <form action="{% url 'assoc_fertilizer' plant.id fertilizer.id %}" method="post">
                                 {% csrf_token %}
-                                <button type="submit" class="btn">Add</button>
+                                <button type="submit" class="btn" style="font-family: 'Italiana', serif;">Add</button>
                             </form>
                         </div>
                     </div>
                 {% endfor %}
             {% else %}
-                <h5>{{plant.name}} Already Has All Fertilizers Available</h5>
+                <h5 style="font-family: 'Italiana', serif;">{{plant.name}} Already Has All Fertilizers Available</h5>
             {% endif %}
         {% else %}
     

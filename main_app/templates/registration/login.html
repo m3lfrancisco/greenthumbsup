@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="center-align" style="color: #6d4c41">Login</h1>
+<h1 class="center-align" style="color: #6d4c41; font-family: 'Italiana', serif;">Login</h1>
 
 <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" class="btn waves-effect waves-light" value="login">
+    <input type="submit" class="btn waves-effect waves-light" value="login" style="font-family: 'Italiana', serif;">
     <input type="hidden" name="next" value="{{ next }}">
 </form>
 

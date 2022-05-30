@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="center-align" style="color: #6d4c41">All Community Plants</h1>
+<h1 class="center-align" style="color: #6d4c41; font-family: 'Italiana', serif;">All Community Plants</h1>
 
 <div class="container">
     <div class="row">
@@ -9,21 +9,21 @@
             <div class="col s12 m6 l4">
                 <div class="card">
                     <div class="card-content" style="background-color: #FFFDE7; color: #0288d1">
-                        <span class="card-title">{{ plant.name }}</span>
+                        <span class="card-title" style="font-family: 'Italiana', serif;">{{ plant.name }}</span>
                         {% for photo in plant.photo_set.all %}
                             <img class="responsive-img card-panel" src="{{photo.url}}" style="white-space: nowrap;">
                         {% empty %}
-                            <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+                            <div class="card-panel teal-text center-align" style="font-family: 'Italiana', serif;">No Photos Uploaded</div>
                         {% endfor %}
-                        <p>Plant Type: {{ plant.plant_type }}</p>
-                        <p>Color: {{ plant.color }}</p>
-                        <p>Sunlight: {{ plant.sunlight }}</p>
-                        <p>Adoption Date: {{ plant.adoption_date }}</p>
-                        <p>Notes: {{ plant.notes }}</p>
+                        <p style="font-family: 'Roboto', sans-serif;">Plant Type: {{ plant.plant_type }}</p>
+                        <p style="font-family: 'Roboto', sans-serif;">Color: {{ plant.color }}</p>
+                        <p style="font-family: 'Roboto', sans-serif;">Sunlight: {{ plant.sunlight }}</p>
+                        <p style="font-family: 'Roboto', sans-serif;">Adoption Date: {{ plant.adoption_date }}</p>
+                        <p style="font-family: 'Roboto', sans-serif;">Notes: {{ plant.notes }}</p>
                         {% if plant.user != user %}
-                            <p>Contributed by {{ plant.user }}</p>
+                            <p style="font-family: 'Roboto', sans-serif;">Contributed by {{ plant.user }}</p>
                         {% else %}
-                            <p>Green Thumbs Up!</p>
+                            <p style="font-family: 'Italiana', serif;">Green Thumbs Up!</p>
                         {% endif %}
                     </div>
                 </div>
