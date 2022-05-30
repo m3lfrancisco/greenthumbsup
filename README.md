@@ -1,13 +1,8 @@
 <h1><p style="color:green;text-align:center;font-size:55px;"><B>WELCOME TO GREEN THUMBS UP</B></p></h1>
 
-
 <h2><p style="color:green;text-align:center;font-size:40px;"><B>Where Users Come To GROW</B></p></h2>
 
-
-
 <h3><p style="color:green;text-align:left;font-size:30px;"><B>Team BMR</B></p></h3>
-
-
 
 ![picture 1](images/1690acfcbace66e7ee9d52342462b86b15a86eb1f1642307161a6cdfb1a96973.png)  
 
@@ -18,6 +13,21 @@
 <B>R</B>   `@roob19`           https://github.com/Roob19
 
 Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
+
+ERD
+<img src="https://imgur.com/GZCllNi.png" />
+
+Home Page
+<img src="https://imgur.com/EE7UjWx.png" />
+
+All Community Plants Page
+<img src="https://imgur.com/BbL1LRd.png" />
+
+My Plants Page
+<img src="https://imgur.com/5emb1En.png" />
+
+Plant Details Page
+<img src="https://imgur.com/JgiTJWK.png" />
 
 ### **How We Grow a User Story:**
 
@@ -42,23 +52,27 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 
 ### **Green Thumbs Up Grown With:**
 
-* Python
-* Django
-* Materialize
-* Heroku
-* VS Code
-* Postgresql
-* SQLite
-* PG Admin
-* AWS
-* GitHub
-* GitHub Projects
-* Whimsical
-* HTML
-* CSS
-* Putty
-* Classmates
-* Instructors
+| | |
+| :---: | :---: |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="75" width="75"/> | Python | 
+|<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" height="75" width="75" /> | Django |
+|<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" height="75" width="75" /> | Materialize | 
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg" height="75" width="75" /> | Heroku |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="75" width="75" /> | VS Code |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg" height="75" width="75" /> | Postgresql |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" height="75" width="75" /> | SQLite |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" height="75" width="75" /> | AWS |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="75" width="75" /> | GitHub |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="75" width="75" /> | Git |
+| <img src="https://www.finsmes.com/wp-content/uploads/2021/11/Whimsical.jpg" height="75" width="75" />| Whimsical |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="75" width="75" /> | HTML |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="75" width="75" /> | CSS |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/LottieFiles_logo.svg/799px-LottieFiles_logo.svg.png?20200720040237" height="75" />| Lottie |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" height="75" width="75" /> | Bash |
+| <img src="https://crpd.com/wp-content/uploads/Rancho-Cordova-Logo-Color-Large.png" height="75" /> | Classmates |
+| <img src="https://iconape.com/wp-content/files/on/182367/png/general-assembly-logo.png" height="75" width="75" /> | Instructors |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/putty/putty-original.svg" height="75" width="75" /> | Bob's Putty |
+
 
 ****Future Enhancements:****
 
@@ -118,15 +132,8 @@ Git Hub***:      **https://github.com/m3lfrancisco/greenthumbsup**
 GitHub Project-3:   **https://github.com/m3lfrancisco/greenthumbsup/projects**
 [ERD] **(https://lucid.app/lucidchart/88e4fc2f-7bd4-45dc-9754-6f9ecc78b022/edit?invitationId=inv_dbe4d151-4bc3-4b70-ac24-9c4416f829d7&referringApp=slack&page=0_0#)**
 
-|||||https://greenthumbsup.herokuapp.com|
-
-
-
-|  |  |
+https://greenthumbsup.herokuapp.com|
 
 ### **Thanks to:**
 
 To the Team and Entire SEIR28RC class
-
-</body>
-</html>
