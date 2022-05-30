@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_juote5w5.json"  
+    background="transparent"  
+    speed="1"  
+    style="width: 200px; height: 200px; display: inline-block; position: relative;"  
+    loop controls autoplay>
+</lottie-player>
+
+
 {% if object %}
-    <h1 class="center-align" style="color: #6d4c41">Edit <span style="color: #0288d1">{{object.name}}</span></h1>
+    <h1 class="center-align" style="display: inline-block; color: #6d4c41">Edit <span style="color: #0288d1">{{object.name}}</span></h1>
 {% else %}
-    <h1 class="center-align" style="color: #6d4c41">Add a Plant</h1>
+    <h1 class="center-align" style="display: inline-block; color: #6d4c41">Add a Plant</h1>
 {% endif %}
 
 <form action="" method="POST">
