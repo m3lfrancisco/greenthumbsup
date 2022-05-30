@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'greenthumbsup',
         'USER': 'myappuser',
         'PASSWORD': 'mypass',
-         'HOST': 'localhost',
+        'HOST': 'localhost',
         'PORT': 5432
     }
 }
