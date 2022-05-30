@@ -7,14 +7,22 @@
     <div class="row">
         {% for plant in plants %}
             <div class="col s12 m6 l4">
-                <div class="card">
-                    <div class="card-content" style="background-color: #FFFDE7; color: #0288d1">
-                        <span class="card-title" style="font-size: 2em; font-weight: 900; font-family: 'Italiana', serif;">{{ plant.name }}</span>
+                <div class="card large" style="background-color: #FFFDE7; color: #0288d1">
+                    <div class="card-content">
                         {% for photo in plant.photo_set.all %}
                             <img class="responsive-img card-panel" src="{{photo.url}}" style="white-space: nowrap;">
                         {% empty %}
-                            <div class="card-panel teal-text center-align" style="font-family: 'Italiana', serif;">No Photos Uploaded</div>
+                            <div class="card-panel teal-text center-align" style="font-size: 1.5em; font-weight: 900; font-family: 'Italiana', serif;">No Photos Uploaded</div>
                         {% endfor %}
+                        <span class="card-title activator" style="font-size: 2em; font-weight: 900; font-family: 'Italiana', serif;">{{ plant.name }}
+                            <i class="material-icons right">more_vert</i>
+                        </span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal" style="background-color: #FFFDE7; color: #0288d1">
+                        <span class="card-title activator" style="font-size: 2em; font-weight: 900; font-family: 'Italiana', serif;">{{ plant.name }}
+                            <i class="material-icons right">close</i>
+                        </span>
                         <p style="font-size: 1.3em; font-weight: 900; font-family: 'Roboto', sans-serif;">Plant Type: {{ plant.plant_type }}</p>
                         <p style="font-size: 1.3em; font-weight: 900; font-family: 'Roboto', sans-serif;">Color: {{ plant.color }}</p>
                         <p style="font-size: 1.3em; font-weight: 900; font-family: 'Roboto', sans-serif;">Sunlight: {{ plant.sunlight }}</p>

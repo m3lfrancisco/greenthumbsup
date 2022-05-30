@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<center>
+<div class="valign-wrapper" style="margin-top: 5vmin;">
+{% comment %} <center> {% endcomment %}
     <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_vjigkpcg.json"  
         background="transparent"  
         speed="1"  
@@ -9,7 +10,7 @@
         loop autoplay>
     </lottie-player>
     
-    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_suhe7qtm.json"  
+    {% comment %} <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_suhe7qtm.json"  
         background="transparent"  
         speed="1"  
         style="width: 300px; height: 300px;"  
@@ -28,9 +29,10 @@
         speed="1"  
         style="width: 300px; height: 300px;"  
         loop autoplay>
-    </lottie-player>
+    </lottie-player> {% endcomment %}
 
     <h3 class="center-align" style="color: #6d4c41;">Sorry, the page you are looking for is not available.</h3>
-</center>
+{% comment %} </center> {% endcomment %}
+</div>
 
 {% endblock %}
