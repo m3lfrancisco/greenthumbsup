@@ -1,13 +1,8 @@
 <h1><p style="color:green;text-align:center;font-size:55px;"><B>WELCOME TO GREEN THUMBS UP</B></p></h1>
 
-
 <h2><p style="color:green;text-align:center;font-size:40px;"><B>Where Users Come To GROW</B></p></h2>
 
-
-
 <h3><p style="color:green;text-align:left;font-size:30px;"><B>Team BMR</B></p></h3>
-
-
 
 ![picture 1](images/1690acfcbace66e7ee9d52342462b86b15a86eb1f1642307161a6cdfb1a96973.png)  
 
@@ -18,6 +13,16 @@
 <B>R</B>   `@roob19`           https://github.com/Roob19
 
 Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
+
+<img src="https://imgur.com/GZCllNi.png" />
+
+![Green Thumbs Up Home Page](https://imgur.com/EE7UjWx.png)
+
+![All Community Plants Page](https://imgur.com/BbL1LRd.png)
+
+![My Plants Page](https://imgur.com/5emb1En.png)
+
+![Plant Details Page](https://imgur.com/JgiTJWK.png)
 
 ### **How We Grow a User Story:**
 
@@ -65,16 +70,6 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 | <img src="https://iconape.com/wp-content/files/on/182367/png/general-assembly-logo.png" height="75" width="75" /> | Instructors |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/putty/putty-original.svg" height="75" width="75" /> | Bob's Putty |
 
-
-<img src="https://imgur.com/GZCllNi.png" />
-
-<img src="https://imgur.com/EE7UjWx.png" />
-
-<img src="https://imgur.com/BbL1LRd.png" />
-
-<img src="https://imgur.com/5emb1En.png" />
-
-<img src="https://imgur.com/JgiTJWK.png" />
 
 ****Future Enhancements:****
 
@@ -134,15 +129,8 @@ Git Hub***:      **https://github.com/m3lfrancisco/greenthumbsup**
 GitHub Project-3:   **https://github.com/m3lfrancisco/greenthumbsup/projects**
 [ERD] **(https://lucid.app/lucidchart/88e4fc2f-7bd4-45dc-9754-6f9ecc78b022/edit?invitationId=inv_dbe4d151-4bc3-4b70-ac24-9c4416f829d7&referringApp=slack&page=0_0#)**
 
-|||||https://greenthumbsup.herokuapp.com|
-
-
-
-|  |  |
+https://greenthumbsup.herokuapp.com|
 
 ### **Thanks to:**
 
 To the Team and Entire SEIR28RC class
-
-</body>
-</html>
