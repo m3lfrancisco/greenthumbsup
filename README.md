@@ -1,6 +1,9 @@
-<h1 style="color:green; text-align:center; font-size:55px;"><B>Welcome To Green Thumbs Up</B></h1>
+<div id="top"></div>
 
-<h2 style="color:green; text-align:center; font-size:40px;"><B>Where Users Come To <em>GROW</em></B></h2>
+<div align="center">
+  <h1 style="color:green; text-align:center; font-size:55px;"><B>Welcome To Green Thumbs Up</B></h1>
+  <h2 style="color:green; text-align:center; font-size:40px;"><B>Where Users Come To <em>GROW</em></B></h2>
+</div>
 
 <h3 style="color:green; text-align:left; font-size:30px;"><B>Team BMR</B></h3>
 
@@ -148,3 +151,5 @@ In the **Community Plants** section, you will see all the plants of all the app 
 - [ ] Add Goggle OAuth
 - [ ] Add Facebook OAuth
 - [ ] Add LinkedIn Auth
+
+<p align="right">(<a href="#top">Back To Top</a>)</p>
