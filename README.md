@@ -38,7 +38,7 @@ Green Thumbs Up is an app where plant parents can keep track of their plants and
 - [Table of Contents](#table-of-contents)
 - [Green Thumbs Up Grown With](#green-thumbs-up-grown-with)
 - [How We Grow a User Story](#how-we-grow-a-user-story)
-- [Installation](#installation)
+- [Getting Started](#getting-started)
 - [Usage](#usage)
   - [<a href="https://greenthumbsup.herokuapp.com/" target="_blank">Click here for deployed app</a>](#click-here-for-deployed-app)
 - [Next Steps](#next-steps)
@@ -97,7 +97,7 @@ Green Thumbs Up is an app where plant parents can keep track of their plants and
  
 ---
 
-## Installation
+## Getting Started
 
 To run locally: 
 
@@ -125,11 +125,9 @@ To run locally:
 
 ### <a href="https://greenthumbsup.herokuapp.com/" target="_blank">Click here for deployed app</a>
 
-On the Home page you will see a nav bar with **About**, **Community Plants**, **Sign Up**, and **Log In**. You will also see a carousel of plant photos. If you click on the featured photo, it will take you to the **Community Plants** page. In order to use the other features of the site, you will either need to log in or sign up. 
+On the Home page you will see a nav bar with **About**, **Community Plants**, **Sign Up**, and **Log In**. You will also see a carousel of plant photos. If you click on the featured photo, it will take you to the **Community Plants** page. There you will see all the plants of all the app users. Click the *three dots* to the right of the plant name to see the plant information and the name of the user that the plant belongs to. In order to use the other features of the site, you will either need to log in or sign up. 
 
 Once your logged in, it will take you to **My Plants** page and you will see that **My Plants**, **Add a Plant**, **Add a Fertilizer**, and **All Fertilizers** links have been added to the nav bar. You can go add a plant and when your done, it will take you to the **My Plants** page and you will see your plant there. Click the plant card to go to the **Plant Details** page. There you will see the information you have entered about your plant. It is also there where you can take a photo of your plant or upload a photo from your photo library by simply clicking **Choose File**. You can also log your plant's watering schedule so you can keep track of it. The **Edit** and **Delete** buttons are located underneath the plant info card if you need to make any updates on your plant. You will also see your plant's fertilizers here or the **Available Fertilizers** that have been added by users of the app.
-
-In the **Community Plants** section, you will see all the plants of all the app users. Click the *three dots* to the right of the plant name to see the plant information and the name of the user that the plant belongs to. 
 
 ![Green Thumbs Up Home Page](https://imgur.com/EE7UjWx.png)
 
