@@ -39,8 +39,8 @@ Green Thumbs Up is an app where plant parents can keep track of their plants and
 - [Green Thumbs Up Grown With](#green-thumbs-up-grown-with)
 - [How We Grow a User Story](#how-we-grow-a-user-story)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
   - [<a href="https://greenthumbsup.herokuapp.com/" target="_blank">Click here for deployed app</a>](#click-here-for-deployed-app)
+- [Project Planning](#project-planning)
 - [Next Steps](#next-steps)
 
 ---
@@ -99,30 +99,6 @@ Green Thumbs Up is an app where plant parents can keep track of their plants and
 
 ## Getting Started
 
-To run locally: 
-
- - Fork and clone this repository
- - You will need to have Django, Python and PostgreSQL installed
- - Run ` pip install Django ` to install Django (**Important! Case Sensitive**) 
- - Create a new PostgreSQL database ` createdb greenthumbsup `
- - Start your virtual environment ` source env/bin/activate ` If you don't have one yet, you can create one ` virtualenv env `
- - Run ` python3 manage.py makemigrations ` to run migrations
- - Then ` python3 manage.py migrate ` to create your tables
- - Check and make sure the project starts up ` python3 manage.py runserver ` 
- - Browse to ` localhost:8000 ` 
-
-* [GitHub Projects](https://github.com/m3lfrancisco/greenthumbsup/projects/1)
-
-* [Wireframe](https://whimsical.com/bmrs-greenthumbsup-yGVgyBMuuiL7R3QsuQnjs)
-
-* [ERD](https://lucid.app/lucidchart/88e4fc2f-7bd4-45dc-9754-6f9ecc78b022/edit?viewport_loc=-363%2C-436%2C4501%2C2177%2C0_0&invitationId=inv_dbe4d151-4bc3-4b70-ac24-9c4416f829d7#)  
-
-* [Pitch Deck](https://github.com/m3lfrancisco/greenthumbsup/blob/main/Team%20BMR%20Pitch%20Deck.pdf)
-
----
-
-## Usage
-
 ### <a href="https://greenthumbsup.herokuapp.com/" target="_blank">Click here for deployed app</a>
 
 On the Home page you will see a nav bar with **About**, **Community Plants**, **Sign Up**, and **Log In**. You will also see a carousel of plant photos. If you click on the featured photo, it will take you to the **Community Plants** page. There you will see all the plants of all the app users. Click the *three dots* to the right of the plant name to see the plant information and the name of the user that the plant belongs to. In order to use the other features of the site, you will either need to log in or sign up. 
@@ -136,6 +112,18 @@ Once your logged in, it will take you to **My Plants** page and you will see tha
 ![My Plants Page](https://imgur.com/5emb1En.png)
 
 ![Plant Details Page](https://imgur.com/JgiTJWK.png)
+
+---
+
+## Project Planning 
+
+* [GitHub Projects](https://github.com/m3lfrancisco/greenthumbsup/projects/1)
+
+* [Wireframe](https://whimsical.com/bmrs-greenthumbsup-yGVgyBMuuiL7R3QsuQnjs)
+
+* [ERD](https://lucid.app/lucidchart/88e4fc2f-7bd4-45dc-9754-6f9ecc78b022/edit?viewport_loc=-363%2C-436%2C4501%2C2177%2C0_0&invitationId=inv_dbe4d151-4bc3-4b70-ac24-9c4416f829d7#)  
+
+* [Pitch Deck](https://github.com/m3lfrancisco/greenthumbsup/blob/main/Team%20BMR%20Pitch%20Deck.pdf)
 
 ---
 
