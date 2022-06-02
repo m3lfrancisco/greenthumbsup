@@ -132,7 +132,7 @@ Once your logged in, it will take you to **My Plants** page and you will see tha
 - [ ] Add and Consume 3rd party API's to get plant care tips
 - [ ] Enable users to create a profile with their first and last name, and email address
 - [ ] Add functionality to delete a photo
-- [ ] Show a message for first time users to see on My Plants page when they first log in, to Add a PLant and add animation
+- [ ] Show a message and animation for first time users to see on My Plants page when they first log in to add a plant 
 - [ ] Enable logged in users to like each other's submissions
 - [ ] Add Goggle OAuth
 - [ ] Add Facebook OAuth
