@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'greenthumbsup.wsgi.application'
+WSGI_APPLICATION = 'greenthumbsupmyf.wsgi.application'
 
 
 # Database
