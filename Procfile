@@ -1,1 +1,1 @@
-web: gunicorn greenthumbsupmyf.wsgi
+web: gunicorn greenthumbsup.wsgi
