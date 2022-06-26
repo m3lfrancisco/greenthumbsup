@@ -17,7 +17,7 @@
 
 ---
 
-### <a href="https://greenthumbsup.herokuapp.com/" target="_blank">Launch GreenThumbsUp</a>
+### <a href="https://greenthumbsupmyf.herokuapp.com/" target="_blank">Launch GreenThumbsUp</a>
 
 ## Description
 
