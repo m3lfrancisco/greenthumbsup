@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'greenthumbsup.urls'
+ROOT_URLCONF = 'greenthumbsupmyf.urls'
 
 TEMPLATES = [
     {
